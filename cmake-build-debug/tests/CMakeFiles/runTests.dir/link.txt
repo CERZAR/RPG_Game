@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/runTests.dir/GameTests.cpp.o  -o runTests  -L/home/cezar/CLionProjects/RPG_GAME_lin/SFML_LIBRARY_DIR -Wl,-rpath,/home/cezar/CLionProjects/RPG_GAME_lin/SFML_LIBRARY_DIR ../lib/libgtestd.a ../lib/libgtest_maind.a ../lib/libgtestd.a -lpthread 
