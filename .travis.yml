@@ -7,7 +7,6 @@ jobs:
     - name: "tests"
       script:
         - cd tests
-        - cmake -Dtest=ON ..
         - make GameTests
 
 notifications:
