@@ -90,20 +90,19 @@ set(Sources
         Sources/ResourcesContainer.cpp
         )
 
+
 add_executable(${This} ${Sources} ${Headers})
 target_link_libraries (${This} sfml-graphics sfml-window sfml-system)
 
+enable_testing()
+
+add_subdirectory(Packages/googletest)
 include_directories(Packages/googletest/googletest/include)
 
 add_executable(runGameTests
         tests/GameTests.cpp
         )
 
-add_subdirectory(Packages/googletest)
+target_link_libraries(runGameTests gtest gtest_main sfml-graphics sfml-window sfml-system)
 
-target_link_libraries(runGameTests gtest gtest_main)
-
-add_test(
-        NAME runGameTests
-        COMMAND runGameTests
-)
+add_test(UnitTests runGameTests)
