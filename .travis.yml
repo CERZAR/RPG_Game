@@ -2,5 +2,13 @@ os: linux
 sudo: required
 language: "minimal"
 
+jobs:
+  include:
+    - name: "tests"
+      script:
+        - cd tests
+        - cmake -Dtest=ON ..
+        - make GameTests
+
 notifications:
   email: false
