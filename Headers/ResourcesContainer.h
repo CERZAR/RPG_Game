@@ -9,9 +9,9 @@
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 
- /**
-  * @brief resourcesContainer class
-  */
+/**
+ * @brief resourcesContainer class
+ */
 class ResourcesContainer
 {
 public:
