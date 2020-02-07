@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/tests/cmake_install.cmake")
+  include("/home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/Packages/googletest/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

@@ -57,28 +57,31 @@ include CMakeFiles/runGameTests.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/runGameTests.dir/flags.make
 
-CMakeFiles/runGameTests.dir/GameTests.cpp.o: CMakeFiles/runGameTests.dir/flags.make
-CMakeFiles/runGameTests.dir/GameTests.cpp.o: ../GameTests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runGameTests.dir/GameTests.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runGameTests.dir/GameTests.cpp.o -c /home/cezar/CLionProjects/RPG_GAME_lin/GameTests.cpp
+CMakeFiles/runGameTests.dir/tests/GameTests.cpp.o: CMakeFiles/runGameTests.dir/flags.make
+CMakeFiles/runGameTests.dir/tests/GameTests.cpp.o: ../tests/GameTests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runGameTests.dir/tests/GameTests.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runGameTests.dir/tests/GameTests.cpp.o -c /home/cezar/CLionProjects/RPG_GAME_lin/tests/GameTests.cpp
 
-CMakeFiles/runGameTests.dir/GameTests.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runGameTests.dir/GameTests.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cezar/CLionProjects/RPG_GAME_lin/GameTests.cpp > CMakeFiles/runGameTests.dir/GameTests.cpp.i
+CMakeFiles/runGameTests.dir/tests/GameTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runGameTests.dir/tests/GameTests.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cezar/CLionProjects/RPG_GAME_lin/tests/GameTests.cpp > CMakeFiles/runGameTests.dir/tests/GameTests.cpp.i
 
-CMakeFiles/runGameTests.dir/GameTests.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runGameTests.dir/GameTests.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cezar/CLionProjects/RPG_GAME_lin/GameTests.cpp -o CMakeFiles/runGameTests.dir/GameTests.cpp.s
+CMakeFiles/runGameTests.dir/tests/GameTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runGameTests.dir/tests/GameTests.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cezar/CLionProjects/RPG_GAME_lin/tests/GameTests.cpp -o CMakeFiles/runGameTests.dir/tests/GameTests.cpp.s
 
 # Object files for target runGameTests
 runGameTests_OBJECTS = \
-"CMakeFiles/runGameTests.dir/GameTests.cpp.o"
+"CMakeFiles/runGameTests.dir/tests/GameTests.cpp.o"
 
 # External object files for target runGameTests
 runGameTests_EXTERNAL_OBJECTS =
 
-runGameTests: CMakeFiles/runGameTests.dir/GameTests.cpp.o
+runGameTests: CMakeFiles/runGameTests.dir/tests/GameTests.cpp.o
 runGameTests: CMakeFiles/runGameTests.dir/build.make
+runGameTests: lib/libgtestd.a
+runGameTests: lib/libgtest_maind.a
+runGameTests: lib/libgtestd.a
 runGameTests: CMakeFiles/runGameTests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable runGameTests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runGameTests.dir/link.txt --verbose=$(VERBOSE)

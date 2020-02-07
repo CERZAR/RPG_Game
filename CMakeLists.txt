@@ -93,6 +93,7 @@ set(Sources
 add_executable(${This} ${Sources} ${Headers})
 target_link_libraries (${This} sfml-graphics sfml-window sfml-system)
 
+include_directories(Packages/googletest/googletest/include)
 
 add_executable(runGameTests
         tests/GameTests.cpp

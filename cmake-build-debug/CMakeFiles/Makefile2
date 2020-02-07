@@ -53,21 +53,51 @@ CMAKE_BINARY_DIR = /home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/runGameTests.dir/all
 all: CMakeFiles/RPG_GAME.dir/all
-all: tests/all
+all: Packages/googletest/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
+clean: CMakeFiles/runGameTests.dir/clean
 clean: CMakeFiles/RPG_GAME.dir/clean
-clean: tests/clean
+clean: Packages/googletest/clean
 
 .PHONY : clean
 
 # The main recursive "preinstall" target.
-preinstall: tests/preinstall
+preinstall: Packages/googletest/preinstall
 
 .PHONY : preinstall
+
+#=============================================================================
+# Target rules for target CMakeFiles/runGameTests.dir
+
+# All Build rule for target.
+CMakeFiles/runGameTests.dir/all: Packages/googletest/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/runGameTests.dir/all: Packages/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f CMakeFiles/runGameTests.dir/build.make CMakeFiles/runGameTests.dir/depend
+	$(MAKE) -f CMakeFiles/runGameTests.dir/build.make CMakeFiles/runGameTests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles --progress-num=47,48 "Built target runGameTests"
+.PHONY : CMakeFiles/runGameTests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/runGameTests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/runGameTests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/runGameTests.dir/rule
+
+# Convenience name for target.
+runGameTests: CMakeFiles/runGameTests.dir/rule
+
+.PHONY : runGameTests
+
+# clean rule for target.
+CMakeFiles/runGameTests.dir/clean:
+	$(MAKE) -f CMakeFiles/runGameTests.dir/build.make CMakeFiles/runGameTests.dir/clean
+.PHONY : CMakeFiles/runGameTests.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/RPG_GAME.dir
@@ -97,49 +127,173 @@ CMakeFiles/RPG_GAME.dir/clean:
 .PHONY : CMakeFiles/RPG_GAME.dir/clean
 
 #=============================================================================
-# Directory level rules for directory tests
+# Directory level rules for directory Packages/googletest
 
 # Recursive "all" directory target.
-tests/all: tests/CMakeFiles/runGameTests.dir/all
+Packages/googletest/all: Packages/googletest/googlemock/all
 
-.PHONY : tests/all
+.PHONY : Packages/googletest/all
 
 # Recursive "clean" directory target.
-tests/clean: tests/CMakeFiles/runGameTests.dir/clean
+Packages/googletest/clean: Packages/googletest/googlemock/clean
 
-.PHONY : tests/clean
+.PHONY : Packages/googletest/clean
 
 # Recursive "preinstall" directory target.
-tests/preinstall:
+Packages/googletest/preinstall: Packages/googletest/googlemock/preinstall
 
-.PHONY : tests/preinstall
+.PHONY : Packages/googletest/preinstall
 
 #=============================================================================
-# Target rules for target tests/CMakeFiles/runGameTests.dir
+# Directory level rules for directory Packages/googletest/googlemock
+
+# Recursive "all" directory target.
+Packages/googletest/googlemock/all: Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+Packages/googletest/googlemock/all: Packages/googletest/googlemock/CMakeFiles/gmock.dir/all
+Packages/googletest/googlemock/all: Packages/googletest/googletest/all
+
+.PHONY : Packages/googletest/googlemock/all
+
+# Recursive "clean" directory target.
+Packages/googletest/googlemock/clean: Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+Packages/googletest/googlemock/clean: Packages/googletest/googlemock/CMakeFiles/gmock.dir/clean
+Packages/googletest/googlemock/clean: Packages/googletest/googletest/clean
+
+.PHONY : Packages/googletest/googlemock/clean
+
+# Recursive "preinstall" directory target.
+Packages/googletest/googlemock/preinstall: Packages/googletest/googletest/preinstall
+
+.PHONY : Packages/googletest/googlemock/preinstall
+
+#=============================================================================
+# Target rules for target Packages/googletest/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-tests/CMakeFiles/runGameTests.dir/all:
-	$(MAKE) -f tests/CMakeFiles/runGameTests.dir/build.make tests/CMakeFiles/runGameTests.dir/depend
-	$(MAKE) -f tests/CMakeFiles/runGameTests.dir/build.make tests/CMakeFiles/runGameTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles --progress-num=39,40 "Built target runGameTests"
-.PHONY : tests/CMakeFiles/runGameTests.dir/all
+Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/all: Packages/googletest/googlemock/CMakeFiles/gmock.dir/all
+Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/all: Packages/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
+	$(MAKE) -f Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles --progress-num=41,42 "Built target gmock_main"
+.PHONY : Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
-tests/CMakeFiles/runGameTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/runGameTests.dir/all
+Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles 0
-.PHONY : tests/CMakeFiles/runGameTests.dir/rule
+.PHONY : Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
-runGameTests: tests/CMakeFiles/runGameTests.dir/rule
+gmock_main: Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
 
-.PHONY : runGameTests
+.PHONY : gmock_main
 
 # clean rule for target.
-tests/CMakeFiles/runGameTests.dir/clean:
-	$(MAKE) -f tests/CMakeFiles/runGameTests.dir/build.make tests/CMakeFiles/runGameTests.dir/clean
-.PHONY : tests/CMakeFiles/runGameTests.dir/clean
+Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/clean:
+	$(MAKE) -f Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+.PHONY : Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+
+#=============================================================================
+# Target rules for target Packages/googletest/googlemock/CMakeFiles/gmock.dir
+
+# All Build rule for target.
+Packages/googletest/googlemock/CMakeFiles/gmock.dir/all: Packages/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f Packages/googletest/googlemock/CMakeFiles/gmock.dir/build.make Packages/googletest/googlemock/CMakeFiles/gmock.dir/depend
+	$(MAKE) -f Packages/googletest/googlemock/CMakeFiles/gmock.dir/build.make Packages/googletest/googlemock/CMakeFiles/gmock.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles --progress-num=39,40 "Built target gmock"
+.PHONY : Packages/googletest/googlemock/CMakeFiles/gmock.dir/all
+
+# Build rule for subdir invocation for target.
+Packages/googletest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 Packages/googletest/googlemock/CMakeFiles/gmock.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles 0
+.PHONY : Packages/googletest/googlemock/CMakeFiles/gmock.dir/rule
+
+# Convenience name for target.
+gmock: Packages/googletest/googlemock/CMakeFiles/gmock.dir/rule
+
+.PHONY : gmock
+
+# clean rule for target.
+Packages/googletest/googlemock/CMakeFiles/gmock.dir/clean:
+	$(MAKE) -f Packages/googletest/googlemock/CMakeFiles/gmock.dir/build.make Packages/googletest/googlemock/CMakeFiles/gmock.dir/clean
+.PHONY : Packages/googletest/googlemock/CMakeFiles/gmock.dir/clean
+
+#=============================================================================
+# Directory level rules for directory Packages/googletest/googletest
+
+# Recursive "all" directory target.
+Packages/googletest/googletest/all: Packages/googletest/googletest/CMakeFiles/gtest_main.dir/all
+Packages/googletest/googletest/all: Packages/googletest/googletest/CMakeFiles/gtest.dir/all
+
+.PHONY : Packages/googletest/googletest/all
+
+# Recursive "clean" directory target.
+Packages/googletest/googletest/clean: Packages/googletest/googletest/CMakeFiles/gtest_main.dir/clean
+Packages/googletest/googletest/clean: Packages/googletest/googletest/CMakeFiles/gtest.dir/clean
+
+.PHONY : Packages/googletest/googletest/clean
+
+# Recursive "preinstall" directory target.
+Packages/googletest/googletest/preinstall:
+
+.PHONY : Packages/googletest/googletest/preinstall
+
+#=============================================================================
+# Target rules for target Packages/googletest/googletest/CMakeFiles/gtest_main.dir
+
+# All Build rule for target.
+Packages/googletest/googletest/CMakeFiles/gtest_main.dir/all: Packages/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f Packages/googletest/googletest/CMakeFiles/gtest_main.dir/build.make Packages/googletest/googletest/CMakeFiles/gtest_main.dir/depend
+	$(MAKE) -f Packages/googletest/googletest/CMakeFiles/gtest_main.dir/build.make Packages/googletest/googletest/CMakeFiles/gtest_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles --progress-num=45,46 "Built target gtest_main"
+.PHONY : Packages/googletest/googletest/CMakeFiles/gtest_main.dir/all
+
+# Build rule for subdir invocation for target.
+Packages/googletest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 Packages/googletest/googletest/CMakeFiles/gtest_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles 0
+.PHONY : Packages/googletest/googletest/CMakeFiles/gtest_main.dir/rule
+
+# Convenience name for target.
+gtest_main: Packages/googletest/googletest/CMakeFiles/gtest_main.dir/rule
+
+.PHONY : gtest_main
+
+# clean rule for target.
+Packages/googletest/googletest/CMakeFiles/gtest_main.dir/clean:
+	$(MAKE) -f Packages/googletest/googletest/CMakeFiles/gtest_main.dir/build.make Packages/googletest/googletest/CMakeFiles/gtest_main.dir/clean
+.PHONY : Packages/googletest/googletest/CMakeFiles/gtest_main.dir/clean
+
+#=============================================================================
+# Target rules for target Packages/googletest/googletest/CMakeFiles/gtest.dir
+
+# All Build rule for target.
+Packages/googletest/googletest/CMakeFiles/gtest.dir/all:
+	$(MAKE) -f Packages/googletest/googletest/CMakeFiles/gtest.dir/build.make Packages/googletest/googletest/CMakeFiles/gtest.dir/depend
+	$(MAKE) -f Packages/googletest/googletest/CMakeFiles/gtest.dir/build.make Packages/googletest/googletest/CMakeFiles/gtest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles --progress-num=43,44 "Built target gtest"
+.PHONY : Packages/googletest/googletest/CMakeFiles/gtest.dir/all
+
+# Build rule for subdir invocation for target.
+Packages/googletest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 Packages/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles 0
+.PHONY : Packages/googletest/googletest/CMakeFiles/gtest.dir/rule
+
+# Convenience name for target.
+gtest: Packages/googletest/googletest/CMakeFiles/gtest.dir/rule
+
+.PHONY : gtest
+
+# clean rule for target.
+Packages/googletest/googletest/CMakeFiles/gtest.dir/clean:
+	$(MAKE) -f Packages/googletest/googletest/CMakeFiles/gtest.dir/build.make Packages/googletest/googletest/CMakeFiles/gtest.dir/clean
+.PHONY : Packages/googletest/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/cezar/CLionProjects/RPG_GAME_lin/SFML_INCLUDE_DIR 
+CXX_INCLUDES = -I/home/cezar/CLionProjects/RPG_GAME_lin/SFML_INCLUDE_DIR -I/home/cezar/CLionProjects/RPG_GAME_lin/tests/../Packages/googletest 
 
