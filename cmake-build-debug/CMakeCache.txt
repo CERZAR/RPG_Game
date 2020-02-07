@@ -17,6 +17,9 @@
 //Builds the googlemock subproject
 BUILD_GMOCK:BOOL=ON
 
+//Build all tests.
+BUILD_TESTS:BOOL=OFF
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 

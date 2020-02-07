@@ -77,8 +77,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/runGameTests.dir/DependInfo.cmake"
   "CMakeFiles/RPG_GAME.dir/DependInfo.cmake"
+  "CMakeFiles/runGameTests.dir/DependInfo.cmake"
   "Packages/googletest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "Packages/googletest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "Packages/googletest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"

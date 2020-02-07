@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/clion-2019.2.4/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/clion-2019.2.4/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -92,6 +80,39 @@ install/strip/fast: preinstall/fast
 	/opt/clion-2019.2.4/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/opt/clion-2019.2.4/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/opt/clion-2019.2.4/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/opt/clion-2019.2.4/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -113,16 +134,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -157,19 +168,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named runGameTests
-
-# Build rule for target.
-runGameTests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 runGameTests
-.PHONY : runGameTests
-
-# fast build rule for target.
-runGameTests/fast:
-	$(MAKE) -f CMakeFiles/runGameTests.dir/build.make CMakeFiles/runGameTests.dir/build
-.PHONY : runGameTests/fast
-
-#=============================================================================
 # Target rules for targets named RPG_GAME
 
 # Build rule for target.
@@ -181,6 +179,19 @@ RPG_GAME: cmake_check_build_system
 RPG_GAME/fast:
 	$(MAKE) -f CMakeFiles/RPG_GAME.dir/build.make CMakeFiles/RPG_GAME.dir/build
 .PHONY : RPG_GAME/fast
+
+#=============================================================================
+# Target rules for targets named runGameTests
+
+# Build rule for target.
+runGameTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runGameTests
+.PHONY : runGameTests
+
+# fast build rule for target.
+runGameTests/fast:
+	$(MAKE) -f CMakeFiles/runGameTests.dir/build.make CMakeFiles/runGameTests.dir/build
+.PHONY : runGameTests/fast
 
 #=============================================================================
 # Target rules for targets named gmock_main
@@ -1266,14 +1277,15 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/local"
-	@echo "... runGameTests"
 	@echo "... install"
 	@echo "... install/strip"
 	@echo "... RPG_GAME"
+	@echo "... install/local"
+	@echo "... runGameTests"
+	@echo "... test"
+	@echo "... list_install_components"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... list_install_components"
 	@echo "... gmock_main"
 	@echo "... gmock"
 	@echo "... gtest_main"

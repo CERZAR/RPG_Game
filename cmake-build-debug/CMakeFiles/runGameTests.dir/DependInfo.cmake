@@ -13,6 +13,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../SFML_INCLUDE_DIR"
   "../Packages/googletest/googletest/include"
   "../Packages/googletest/googletest"
+  "../SFML-2.5.1/include"
   )
 
 # Targets to which this target links.

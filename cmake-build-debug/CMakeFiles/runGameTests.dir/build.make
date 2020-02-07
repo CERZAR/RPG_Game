@@ -81,6 +81,9 @@ runGameTests: CMakeFiles/runGameTests.dir/tests/GameTests.cpp.o
 runGameTests: CMakeFiles/runGameTests.dir/build.make
 runGameTests: lib/libgtestd.a
 runGameTests: lib/libgtest_maind.a
+runGameTests: ../SFML-2.5.1/lib/libsfml-graphics.so.2.5.1
+runGameTests: ../SFML-2.5.1/lib/libsfml-window.so.2.5.1
+runGameTests: ../SFML-2.5.1/lib/libsfml-system.so.2.5.1
 runGameTests: lib/libgtestd.a
 runGameTests: CMakeFiles/runGameTests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cezar/CLionProjects/RPG_GAME_lin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable runGameTests"
