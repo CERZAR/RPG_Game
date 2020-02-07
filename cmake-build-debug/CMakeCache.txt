@@ -17,7 +17,7 @@
 //Builds the googlemock subproject
 BUILD_GMOCK:BOOL=ON
 
-//Build all tests.
+//Off
 BUILD_TESTS:BOOL=OFF
 
 //Path to a program.

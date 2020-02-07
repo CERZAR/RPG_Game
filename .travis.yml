@@ -2,39 +2,12 @@ os: linux
 sudo: required
 language: "minimal"
 
-#jobs:
-#  include:
-#    - name: "tests"
-#      script:
-#        - cd tests
-#        - make GameTests
-#
-#notifications:
-#  email: false
-
-services:
-  - docker
-
-matrix:
+jobs:
   include:
-    - os: linux
-      dist: xenial
-      sudo: true
-      compiler: gcc
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - gcc-8
-            - g++-8
-            - qtdeclarative5-dev
-            - cmake
+    - name: "tests"
+      script:
+        - cd tests
+        - make runGameTests
 
-script:
-  - sudo ln -s /usr/bin/gcc-8 /usr/local/bin/gcc
-  - sudo ln -s /usr/bin/g++-8 /usr/local/bin/g++
-  - mkdir -p .build
-  - cd .build
-  - cmake .. -DBUILD_TESTS=On
-  - cmake --build .
+notifications:
+  email: false
