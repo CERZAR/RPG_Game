@@ -2,12 +2,5 @@ os: linux
 sudo: required
 language: "minimal"
 
-jobs:
-  include:
-    - name: "tests"
-      script:
-        - cd tests
-        - make GameTests
-
 notifications:
   email: false
