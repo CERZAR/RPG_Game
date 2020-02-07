@@ -7,7 +7,7 @@ jobs:
     - name: "tests"
       script:
         - cd tests
-        - make runGameTests
+        - make GameTests
 
 notifications:
   email: false
