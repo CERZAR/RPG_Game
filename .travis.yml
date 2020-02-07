@@ -1,5 +1,6 @@
+os: linux
 sudo: required
-language: cpp
+language: "minimal"
 
 notifications:
   email: false
