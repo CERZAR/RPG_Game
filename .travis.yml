@@ -6,9 +6,11 @@ jobs:
   include:
     - name: "tests"
       script:
-        - cd tests
-        - cmake -Dtest=ON ..
-        - make GameTests
+        - mkdir build
+        - cd build
+        - cmake ..
+        - cmake --build .
+        - ctest
 
 notifications:
   email: false
