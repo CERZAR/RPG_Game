@@ -12,8 +12,6 @@ link_directories(SFML_LIBRARY_DIR)
 include_directories(SFML_INCLUDE_DIR)
 find_package(SFML 2.5.1 COMPONENTS system window graphics)
 
-add_subdirectory(tests)
-
 set(Headers
         Headers/Backpack.h
         Headers/Box.h
@@ -94,3 +92,17 @@ set(Sources
 
 add_executable(${This} ${Sources} ${Headers})
 target_link_libraries (${This} sfml-graphics sfml-window sfml-system)
+
+
+add_executable(runGameTests
+        tests/GameTests.cpp
+        )
+
+add_subdirectory(Packages/googletest)
+
+target_link_libraries(runGameTests gtest gtest_main)
+
+add_test(
+        NAME runGameTests
+        COMMAND runGameTests
+)
