@@ -1,1 +1,5 @@
-#language: rust
+sudo: required
+language: cpp
+
+notifications:
+  email: false
