@@ -114,3 +114,15 @@ TEST(GameTests, PlayerEnemyCollisionTest)
     EXPECT_EQ(1, enemiesArray.size());
     EXPECT_EQ(2, player.exp);
 }
+
+TEST(GameTests, weaponUpgrateTest)
+{
+    player.currentWeapon->updateLevel();
+    player.currentWeapon->update();
+    player.currentWeapon->updateStats();
+    EXPECT_EQ(900, player.currentWeapon->atackSpeed);
+    EXPECT_EQ(20, player.currentWeapon->upgateCost);
+    EXPECT_EQ(2, player.currentWeapon->damage);
+    EXPECT_EQ(4.f, player.currentWeapon->speed);
+    EXPECT_EQ(5000000, player.currentWeapon->lifetime);
+}
