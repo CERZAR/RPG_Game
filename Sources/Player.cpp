@@ -19,11 +19,11 @@ void Player::initVariables()
 
 void Player::initStats()
 {
-	level = 10;
+	level = 1;
 	updateStats();
 	hp = maxHP;
 	mp = maxMP;
-	coins = 500;
+	coins = 0;
 	exp = 0;
 }
 

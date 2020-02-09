@@ -51,7 +51,6 @@ set(Headers
         Headers/ResourcesContainer.h
         )
 set(Sources
-        Sources/main.cpp
         Sources/Backpack.cpp
         Sources/Box.cpp
         Sources/Bullet.cpp
@@ -91,7 +90,7 @@ set(Sources
         )
 
 
-add_executable(${This} ${Sources} ${Headers})
+add_executable(${This} Sources/main.cpp ${Sources} ${Headers})
 target_link_libraries (${This} sfml-graphics sfml-window sfml-system)
 
 enable_testing()
@@ -101,8 +100,10 @@ include_directories(Packages/googletest/googletest/include)
 
 add_executable(runGameTests
         tests/GameTests.cpp
+        ${Sources}
+        ${Headers}
         )
 
 target_link_libraries(runGameTests gtest gtest_main sfml-graphics sfml-window sfml-system)
 
-add_test(UnitTests runGameTests)
+add_test(NAME unit_tests COMMAND tests)

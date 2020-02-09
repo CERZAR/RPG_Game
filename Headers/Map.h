@@ -86,7 +86,7 @@ public:
 	int endX;
 	int endY;
 	int tileSize = 50;
-	Map();
+	Map(ResourcesContainer *pContainer);
 	virtual ~Map();
 	void createMap();
 	bool checkCollision(sf::RectangleShape rect);

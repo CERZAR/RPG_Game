@@ -6,7 +6,7 @@ void Map::init_map_vector()
 
 }
 
-Map::Map()
+Map::Map(ResourcesContainer *pContainer)
 {
 	tilesTexture.loadFromFile("../Resources/tiles.png");
 	sprite.setTexture(tilesTexture);

@@ -231,8 +231,7 @@ void Game::initBackpackState()
 	backpack = new Backpack(resContainter);
 }
 
-Game::Game()
-{
+Game::Game() : map(nullptr) {
 	initVariables();
 	initWindow();
 	initGUI();
