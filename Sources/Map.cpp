@@ -262,15 +262,18 @@ void Map::checkBulletCollision(Object *target) {
   counter = 0;
   for (iter = vector.begin(); iter != vector.end(); iter++) {
     if (target->rect.getGlobalBounds().intersects(
-            vector[counter]->rect.getGlobalBounds())) {
-      if (vector[counter]->type == BOX) {
+            vector[counter]->rect.getGlobalBounds()))
+    {
+      if (vector[counter]->type == BOX)
+      {
         vector[counter]->hp--;
         target->isExist = false;
         if (vector[counter]->hp <= 0)
         {
           vector[counter]->isExist = false;
         }
-      } else if (vector[counter]->type == WALL)
+      } else
+        if (vector[counter]->type == WALL)
         target->isExist = false;
     }
     counter++;
