@@ -5,7 +5,8 @@ services:
 
 jobs:
   include:
-    - os: linux
+    - name: tests
+      os: linux
       dist: xenial
       sudo: true
       compiler: gcc
