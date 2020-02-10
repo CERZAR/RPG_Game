@@ -1,7 +1,6 @@
 #include "../Headers/Game.h"
 
 void Game::initVariables() {
-
   this->window = nullptr;
   player = new Player(resContainter);
   player->updateStats();

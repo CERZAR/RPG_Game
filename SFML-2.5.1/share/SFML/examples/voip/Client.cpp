@@ -83,7 +83,7 @@ private:
   // Member data
   ////////////////////////////////////////////////////////////
   sf::IpAddress m_host;   ///< Address of the remote host
-  unsigned short m_port;  ///< Remote port
+  unsigned int16 m_port;  ///< Remote port
   sf::TcpSocket m_socket; ///< Socket used to communicate with the server
 };
 

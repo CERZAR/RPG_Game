@@ -34,7 +34,7 @@ TEST(GameTests, playerUpdateStatsTest) {
   EXPECT_EQ(30, player.needExp);
   EXPECT_EQ(0, player.coins);
   EXPECT_EQ(0, player.exp);
-};
+}
 
 TEST(GameTests, playerUpdatePositionTest) {
   player.rect.setPosition(25.f, 25.f);

@@ -240,8 +240,8 @@ public:
     for (std::size_t i = 0; i < 10000; i++) {
       // Spread the coordinates from -480 to +480
       // So they'll always fill the viewport at 800x600
-      m_pointCloud[i].position.x = rand() % 960 - 480.f;
-      m_pointCloud[i].position.y = rand() % 960 - 480.f;
+      m_pointCloud[i].position.x = rand_r() % 960 - 480.f;
+      m_pointCloud[i].position.y = rand_r() % 960 - 480.f;
     }
 
     // Load the texture

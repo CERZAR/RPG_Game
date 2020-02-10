@@ -177,7 +177,6 @@ int main() {
       break;
     }
     }
-
   } while (choice != 0);
 
   // Disconnect from the server

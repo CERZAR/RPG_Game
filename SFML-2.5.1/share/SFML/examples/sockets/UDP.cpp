@@ -23,7 +23,7 @@ void runUdpServer(unsigned short port) {
   char in[128];
   std::size_t received;
   sf::IpAddress sender;
-  unsigned short senderPort;
+  unsigned int16 senderPort;
   if (socket.receive(in, sizeof(in), received, sender, senderPort) !=
       sf::Socket::Done)
     return;
@@ -62,7 +62,7 @@ void runUdpClient(unsigned short port) {
   char in[128];
   std::size_t received;
   sf::IpAddress sender;
-  unsigned short senderPort;
+  unsigned int16 senderPort;
   if (socket.receive(in, sizeof(in), received, sender, senderPort) !=
       sf::Socket::Done)
     return;

@@ -349,7 +349,8 @@ void Backpack::update(Player *player) {
         "FLIGHT TIME: " +
         std::to_string((int)player->currentWeapon->lifetime / 1000));
     backpackTextArray[17]->setPosition(x + 820, y + 440);
-    if (player->currentWeapon->level == 5) {
+    if (player->currentWeapon->level == 5)
+    {
       backpackTextArray[17]->setCharacterSize(17);
       backpackTextArray[17]->setString("UPGRATE COST: MAX");
     } else
