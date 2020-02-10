@@ -3,6 +3,7 @@ language: cpp
 services:
   - docker
 
+jobs:
   include:
     - os: linux
       dist: xenial
@@ -16,11 +17,6 @@ services:
             - gcc-8
             - g++-8
             - cmake
-
-jobs:
-  include:
-    - stage: test
-      name: test
       script:
         - git submodule update --init --recursive
         - sudo apt-get install -y libfreetype6-dev libxrandr-dev libudev-dev libogg-dev libflac-dev libvorbis-dev libopenal-dev
@@ -30,6 +26,3 @@ jobs:
         - cd .build
         - cmake .. -DBUILD_TESTS=On
         - cmake --build .
-
-stages:
-  - test
