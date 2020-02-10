@@ -3,12 +3,11 @@
 
 #include "MapObject.h"
 
-class SteelWall :
-        public MapObject {
+class SteelWall : public MapObject {
 public:
-    SteelWall(sf::Sprite *sprite, float x, float y);
+  SteelWall(sf::Sprite *sprite, float x, float y);
 
-    virtual ~SteelWall();
+  virtual ~SteelWall();
 };
 
-#endif //STEELWALL_H
+#endif // STEELWALL_H

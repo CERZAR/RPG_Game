@@ -5,43 +5,41 @@
 #ifndef WEAPON_H
 #define WEAPON_H
 
-#include "Item.h"
 #include "../Headers/DefaultBullet.h"
+#include "Item.h"
 
 /**
  * @brief weapon class
  */
-class Weapon :
-        public Item {
+class Weapon : public Item {
 public:
-    int level{};
-    int atackSpeed{};
-    int upgateCost{};
-    // bulet variables
-    int damage{};
-    float speed{};
-    float lifetime{};
+  int level{};
+  int atackSpeed{};
+  int upgateCost{};
+  // bulet variables
+  int damage{};
+  float speed{};
+  float lifetime{};
 
-    sf::Sprite iconSprite;
+  sf::Sprite iconSprite;
 
-    Weapon(ResourcesContainer *res);
+  Weapon(ResourcesContainer *res);
 
-    virtual ~Weapon();
+  virtual ~Weapon();
 
-    virtual void update();
+  virtual void update();
 
-    void setPosition(sf::Vector2f pos);
+  void setPosition(sf::Vector2f pos);
 
-    sf::Sprite getIcon();
+  sf::Sprite getIcon();
 
-    void updateOutline();
+  void updateOutline();
 
-    void updateLevel();
+  void updateLevel();
 
-    virtual Bullet *getBullet(int direction);
+  virtual Bullet *getBullet(int direction);
 
-    virtual void updateStats() {};
+  virtual void updateStats(){};
 };
 
-
-#endif //WEAPON_H
+#endif // WEAPON_H

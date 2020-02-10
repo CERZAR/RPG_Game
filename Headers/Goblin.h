@@ -2,21 +2,19 @@
 
 #include "Enemy.h"
 
-class Goblin :
-        public Enemy {
+class Goblin : public Enemy {
 private:
-    // Functions
-    void initVariables();
+  // Functions
+  void initVariables();
 
-    void initStats();
+  void initStats();
 
 public:
-    Goblin(ResourcesContainer *res);
+  Goblin(ResourcesContainer *res);
 
-    virtual ~Goblin();
+  virtual ~Goblin();
 
-    void update();
+  void update();
 
-    void render(sf::RenderTarget *target);
+  void render(sf::RenderTarget *target);
 };
-

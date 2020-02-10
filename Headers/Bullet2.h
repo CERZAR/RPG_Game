@@ -2,14 +2,12 @@
 
 #include "Bullet.h"
 
-class Bullet2 :
-        public Bullet {
+class Bullet2 : public Bullet {
 public:
-    Bullet2(int damage, float speed, int direction, float lifetime,
-            ResourcesContainer *res);
+  Bullet2(int damage, float speed, int direction, float lifetime,
+          ResourcesContainer *res);
 
-    virtual ~Bullet2();
+  virtual ~Bullet2();
 
-    void update();
+  void update();
 };
-

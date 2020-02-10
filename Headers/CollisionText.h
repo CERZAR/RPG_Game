@@ -3,19 +3,19 @@
 
 #include "textDisplay.h"
 
-class CollisionText :
-        public textDisplay {
+class CollisionText : public textDisplay {
 private:
-    int transparency;
+  int transparency;
+
 public:
-    sf::Color color;
+  sf::Color color;
 
-    CollisionText(std::string text, std::string font_path, int size,
-                  float lifetime);
+  CollisionText(std::string text, std::string font_path, int size,
+                float lifetime);
 
-    virtual ~CollisionText();
+  virtual ~CollisionText();
 
-    void update();
+  void update();
 };
 
-#endif //TEXTDISPALY_H
+#endif // TEXTDISPALY_H

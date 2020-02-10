@@ -2,16 +2,15 @@
 
 #include "Item.h"
 
-class Energy :
-        public Item {
-    // Variables
-    int counterAnimation = 1;
-    int animationSlow = 0;
+class Energy : public Item {
+  // Variables
+  int counterAnimation = 1;
+  int animationSlow = 0;
+
 public:
-    Energy(ResourcesContainer *res);
+  Energy(ResourcesContainer *res);
 
-    virtual ~Energy();
+  virtual ~Energy();
 
-    void update();
+  void update();
 };
-

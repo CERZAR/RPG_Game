@@ -5,26 +5,27 @@
 
 class Bullet : public Object {
 protected:
-    // Variables
-    float startTime;
-    int counterAnimation = 0;
-    int animationSlow = 0;
+  // Variables
+  float startTime;
+  int counterAnimation = 0;
+  int animationSlow = 0;
+
 public:
-    // Variables
-    float lifetime;
-    bool isPlayerBullet;
+  // Variables
+  float lifetime;
+  bool isPlayerBullet;
 
-    // Functions
-    Bullet(ResourcesContainer *res);
+  // Functions
+  Bullet(ResourcesContainer *res);
 
-    Bullet(int damage, float speed, int direction, float lifetime,
-           ResourcesContainer *res);
+  Bullet(int damage, float speed, int direction, float lifetime,
+         ResourcesContainer *res);
 
-    virtual ~Bullet();
+  virtual ~Bullet();
 
-    virtual void update();
+  virtual void update();
 
-    void render(sf::RenderTarget *target);
+  void render(sf::RenderTarget *target);
 };
 
-#endif //BULLET_H
+#endif // BULLET_H

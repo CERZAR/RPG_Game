@@ -3,25 +3,24 @@
 
 #include "Object.h"
 
-class Enemy :
-        public Object {
+class Enemy : public Object {
 protected:
-    int distanceLength;
-    int distanceCounter = 0;
-    int animationCounter = 0;
-    int animationSlow = 0;
+  int distanceLength;
+  int distanceCounter = 0;
+  int animationCounter = 0;
+  int animationSlow = 0;
 
-    void initVariables();
+  void initVariables();
 
 public:
-    bool isAgro;
-    int getExp;
+  bool isAgro;
+  int getExp;
 
-    Enemy(ResourcesContainer *res);
+  Enemy(ResourcesContainer *res);
 
-    virtual void update(int playerX, int playerY);
+  virtual void update(int playerX, int playerY);
 
-    virtual ~Enemy();
+  virtual ~Enemy();
 };
 
-#endif //ENEMY_H
+#endif // ENEMY_H

@@ -3,23 +3,21 @@
 
 #include "Enemy.h"
 
-class GreenJelly :
-        public Enemy {
+class GreenJelly : public Enemy {
 private:
-    // Functions
-    void initVariables();
+  // Functions
+  void initVariables();
 
-    void initStats();
+  void initStats();
 
 public:
-    GreenJelly(ResourcesContainer *res);
+  GreenJelly(ResourcesContainer *res);
 
-    virtual ~GreenJelly();
+  virtual ~GreenJelly();
 
-    void update(int playerX, int playerY);
+  void update(int playerX, int playerY);
 
-    void render(sf::RenderTarget *target);
+  void render(sf::RenderTarget *target);
 };
 
-
-#endif //GREENJELLY_H
+#endif // GREENJELLY_H

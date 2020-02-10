@@ -3,12 +3,11 @@
 
 #include "MapObject.h"
 
-class GroundWall :
-        public MapObject {
+class GroundWall : public MapObject {
 public:
-    GroundWall(sf::Sprite *sprite, float x, float y);
+  GroundWall(sf::Sprite *sprite, float x, float y);
 
-    virtual ~GroundWall();
+  virtual ~GroundWall();
 };
 
-#endif //GROUNDWALL_H
+#endif // GROUNDWALL_H

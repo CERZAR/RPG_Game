@@ -16,4 +16,4 @@ int GenerateRandomInt0(int max); // 0..max
  */
 float GenerateRandomFloat(float min, float max);
 
-#endif //RANDOM_H
+#endif // RANDOM_H

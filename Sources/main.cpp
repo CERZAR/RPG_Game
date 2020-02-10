@@ -5,7 +5,7 @@
 #include "../Headers/Game.h"
 
 int main() {
-    srand((unsigned) time(nullptr));
-    Game game;
-    game.run();
+  srand((unsigned)time(nullptr));
+  Game game;
+  game.run();
 }

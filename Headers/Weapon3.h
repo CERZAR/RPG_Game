@@ -4,25 +4,23 @@
  */
 #pragma once
 
-#include "Weapon.h"
 #include "../Headers/Bullet3.h"
+#include "Weapon.h"
 
 /**
  * @brief weapon3 class
  */
-class Weapon3 :
-        public Weapon {
+class Weapon3 : public Weapon {
 public:
-    Weapon3(ResourcesContainer *res);
+  Weapon3(ResourcesContainer *res);
 
-    virtual ~Weapon3();
+  virtual ~Weapon3();
 
-    void update();
+  void update();
 
-    void render(sf::RenderTarget *target);
+  void render(sf::RenderTarget *target);
 
-    void updateStats();
+  void updateStats();
 
-    Bullet *getBullet(int direction);
+  Bullet *getBullet(int direction);
 };
-

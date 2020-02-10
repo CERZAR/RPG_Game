@@ -3,19 +3,18 @@
 
 #include "Item.h"
 
-class Coin :
-        public Item {
+class Coin : public Item {
 private:
-    // Variables
-    int counterAnimation = 1;
-    int animationSlow = 0;
+  // Variables
+  int counterAnimation = 1;
+  int animationSlow = 0;
+
 public:
-    Coin(ResourcesContainer *res);
+  Coin(ResourcesContainer *res);
 
-    virtual ~Coin();
+  virtual ~Coin();
 
-    void update();
+  void update();
 };
 
-
-#endif //COINS
+#endif // COINS

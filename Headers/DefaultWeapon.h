@@ -5,26 +5,25 @@
 #ifndef DEFAULTWEAPON_H
 #define DEFAULTWEAPON_H
 
-#include "Weapon.h"
 #include "DefaultBullet.h"
+#include "Weapon.h"
 
 /**
  * @brief default weapon class
  */
-class DefaultWeapon :
-        public Weapon {
+class DefaultWeapon : public Weapon {
 public:
-    DefaultWeapon(ResourcesContainer *res);
+  DefaultWeapon(ResourcesContainer *res);
 
-    virtual ~DefaultWeapon();
+  virtual ~DefaultWeapon();
 
-    void update();
+  void update();
 
-    void render(sf::RenderTarget *target);
+  void render(sf::RenderTarget *target);
 
-    void updateStats();
+  void updateStats();
 
-    Bullet *getBullet(int direction);
+  Bullet *getBullet(int direction);
 };
 
-#endif //DEFAULTWEAPON_H
+#endif // DEFAULTWEAPON_H

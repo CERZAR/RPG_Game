@@ -5,26 +5,25 @@
 #ifndef WEAPON1_H
 #define WEAPON1_H
 
-#include "Weapon.h"
 #include "../Headers/Bullet1.h"
+#include "Weapon.h"
 
 /**
  * @brief weapon1 class
  */
-class Weapon1 :
-        public Weapon {
+class Weapon1 : public Weapon {
 public:
-    Weapon1(ResourcesContainer *res);
+  Weapon1(ResourcesContainer *res);
 
-    virtual ~Weapon1();
+  virtual ~Weapon1();
 
-    void update();
+  void update();
 
-    void render(sf::RenderTarget *target);
+  void render(sf::RenderTarget *target);
 
-    void updateStats();
+  void updateStats();
 
-    Bullet *getBullet(int direction);
+  Bullet *getBullet(int direction);
 };
 
-#endif //WEAPON1_H
+#endif // WEAPON1_H

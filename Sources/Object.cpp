@@ -1,13 +1,7 @@
 #include "../Headers/Object.h"
 
-Object::Object(ResourcesContainer *res) {
-    this->resContainter = res;
-}
+Object::Object(ResourcesContainer *res) { this->resContainter = res; }
 
+Object::~Object() {}
 
-Object::~Object() {
-}
-
-void Object::render(sf::RenderTarget *target) {
-    target->draw(this->sprite);
-}
+void Object::render(sf::RenderTarget *target) { target->draw(this->sprite); }

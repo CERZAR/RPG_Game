@@ -1,8 +1,8 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "Object.h"
 #include "../Headers/DefaultWeapon.h"
+#include "Object.h"
 #include "Weapon1.h"
 #include "Weapon2.h"
 #include "Weapon3.h"
@@ -10,39 +10,39 @@
 
 class Player : public Object {
 private:
-    // Variables
-    int counterWalking = 0;
-    int slowWalk = 0;
+  // Variables
+  int counterWalking = 0;
+  int slowWalk = 0;
 
-    // Functions
-    void initVariables();
+  // Functions
+  void initVariables();
 
-    void initStats();
+  void initStats();
 
 public:
-    // Variables
-    Weapon *currentWeapon;
-    Weapon *secondWeapon;
-    int level;
-    int coins;
-    int needExp;
-    int exp;
-    int maxMP;
-    int mp;
-    bool haveSecondWeapon;
+  // Variables
+  Weapon *currentWeapon;
+  Weapon *secondWeapon;
+  int level;
+  int coins;
+  int needExp;
+  int exp;
+  int maxMP;
+  int mp;
+  bool haveSecondWeapon;
 
-    // Functions
-    Player(ResourcesContainer *res);
+  // Functions
+  Player(ResourcesContainer *res);
 
-    virtual ~Player();
+  virtual ~Player();
 
-    void update();
+  void update();
 
-    void updateStats();
+  void updateStats();
 
-    void takeSecondWeapon(Weapon *pWeapon);
+  void takeSecondWeapon(Weapon *pWeapon);
 
-    Weapon *throwSecondWeapon();
+  Weapon *throwSecondWeapon();
 };
 
-#endif //PLAYER_H
+#endif // PLAYER_H

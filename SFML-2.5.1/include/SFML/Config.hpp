@@ -4,11 +4,12 @@
 // Copyright (C) 2007-2018 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
-// In no event will the authors be held liable for any damages arising from the use of this software.
+// In no event will the authors be held liable for any damages arising from the
+// use of this software.
 //
 // Permission is granted to anyone to use this software for any purpose,
-// including commercial applications, and to alter it and redistribute it freely,
-// subject to the following restrictions:
+// including commercial applications, and to alter it and redistribute it
+// freely, subject to the following restrictions:
 //
 // 1. The origin of this software must not be misrepresented;
 //    you must not claim that you wrote the original software.
@@ -25,7 +26,6 @@
 #ifndef SFML_CONFIG_HPP
 #define SFML_CONFIG_HPP
 
-
 ////////////////////////////////////////////////////////////
 // Define the SFML version
 ////////////////////////////////////////////////////////////
@@ -33,10 +33,10 @@
 #define SFML_VERSION_MINOR 5
 #define SFML_VERSION_PATCH 1
 
-
 ////////////////////////////////////////////////////////////
 // Identify the operating system
-// see http://nadeausoftware.com/articles/2012/01/c_c_tip_how_use_compiler_predefined_macros_detect_operating_system
+// see
+// http://nadeausoftware.com/articles/2012/01/c_c_tip_how_use_compiler_predefined_macros_detect_operating_system
 ////////////////////////////////////////////////////////////
 #if defined(_WIN32)
 
@@ -53,17 +53,17 @@
 
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 
-    // iOS
+// iOS
 #define SFML_SYSTEM_IOS
 
 #elif TARGET_OS_MAC
 
-    // MacOS
+// MacOS
 #define SFML_SYSTEM_MACOS
 
 #else
 
-    // Unsupported Apple system
+// Unsupported Apple system
 #error This Apple operating system is not supported by SFML library
 
 #endif
@@ -105,7 +105,6 @@
 
 #endif
 
-
 ////////////////////////////////////////////////////////////
 // Define a portable debug macro
 ////////////////////////////////////////////////////////////
@@ -115,7 +114,6 @@
 
 #endif
 
-
 ////////////////////////////////////////////////////////////
 // Define helpers to create portable import / export macros for each module
 ////////////////////////////////////////////////////////////
@@ -123,14 +121,16 @@
 
 #if defined(SFML_SYSTEM_WINDOWS)
 
-// Windows compilers need specific (and different) keywords for export and import
+// Windows compilers need specific (and different) keywords for export and
+// import
 #define SFML_API_EXPORT __declspec(dllexport)
 #define SFML_API_IMPORT __declspec(dllimport)
 
-// For Visual C++ compilers, we also need to turn off this annoying C4251 warning
+// For Visual C++ compilers, we also need to turn off this annoying C4251
+// warning
 #ifdef _MSC_VER
 
-#pragma warning(disable: 4251)
+#pragma warning(disable : 4251)
 
 #endif
 
@@ -140,8 +140,8 @@
 
 // GCC 4 has special keywords for showing/hidding symbols,
 // the same keyword is used for both importing and exporting
-#define SFML_API_EXPORT __attribute__ ((__visibility__ ("default")))
-#define SFML_API_IMPORT __attribute__ ((__visibility__ ("default")))
+#define SFML_API_EXPORT __attribute__((__visibility__("default")))
+#define SFML_API_IMPORT __attribute__((__visibility__("default")))
 
 #else
 
@@ -160,7 +160,6 @@
 #define SFML_API_IMPORT
 
 #endif
-
 
 ////////////////////////////////////////////////////////////
 // Cross-platform warning for deprecated functions and classes
@@ -181,55 +180,56 @@
 #elif defined(_MSC_VER)
 
 // Microsoft C++ compiler
-// Note: On newer MSVC versions, using deprecated functions causes a compiler error. In order to
-// trigger a warning instead of an error, the compiler flag /sdl- (instead of /sdl) must be specified.
+// Note: On newer MSVC versions, using deprecated functions causes a compiler
+// error. In order to trigger a warning instead of an error, the compiler flag
+// /sdl- (instead of /sdl) must be specified.
 #define SFML_DEPRECATED __declspec(deprecated)
 
 #elif defined(__GNUC__)
 
 // g++ and Clang
-#define SFML_DEPRECATED __attribute__ ((deprecated))
+#define SFML_DEPRECATED __attribute__((deprecated))
 
 #else
 
 // Other compilers are not supported, leave class or function as-is.
-// With a bit of luck, the #pragma directive works, otherwise users get a warning (no error!) for unrecognized #pragma.
-#pragma message("SFML_DEPRECATED is not supported for your compiler, please contact the SFML team")
+// With a bit of luck, the #pragma directive works, otherwise users get a
+// warning (no error!) for unrecognized #pragma.
+#pragma message(                                                               \
+    "SFML_DEPRECATED is not supported for your compiler, please contact the SFML team")
 #define SFML_DEPRECATED
 
 #endif
-
 
 ////////////////////////////////////////////////////////////
 // Define portable fixed-size types
 ////////////////////////////////////////////////////////////
 namespace sf {
-    // All "common" platforms use the same size for char, short and int
-    // (basically there are 3 types for 3 sizes, so no other match is possible),
-    // we can use them without doing any kind of check
+// All "common" platforms use the same size for char, short and int
+// (basically there are 3 types for 3 sizes, so no other match is possible),
+// we can use them without doing any kind of check
 
-    // 8 bits integer types
-    typedef signed char Int8;
-    typedef unsigned char Uint8;
+// 8 bits integer types
+typedef signed char Int8;
+typedef unsigned char Uint8;
 
-    // 16 bits integer types
-    typedef signed short Int16;
-    typedef unsigned short Uint16;
+// 16 bits integer types
+typedef signed short Int16;
+typedef unsigned short Uint16;
 
-    // 32 bits integer types
-    typedef signed int Int32;
-    typedef unsigned int Uint32;
+// 32 bits integer types
+typedef signed int Int32;
+typedef unsigned int Uint32;
 
-    // 64 bits integer types
+// 64 bits integer types
 #if defined(_MSC_VER)
-    typedef signed   __int64 Int64;
-    typedef unsigned __int64 Uint64;
+typedef signed __int64 Int64;
+typedef unsigned __int64 Uint64;
 #else
-    typedef signed long long Int64;
-    typedef unsigned long long Uint64;
+typedef signed long long Int64;
+typedef unsigned long long Uint64;
 #endif
 
 } // namespace sf
-
 
 #endif // SFML_CONFIG_HPP

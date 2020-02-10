@@ -3,12 +3,11 @@
 
 #include "MapObject.h"
 
-class Ground1 :
-        public MapObject {
+class Ground1 : public MapObject {
 public:
-    Ground1(sf::Sprite *sprite, float x, float y);
+  Ground1(sf::Sprite *sprite, float x, float y);
 
-    virtual ~Ground1();
+  virtual ~Ground1();
 };
 
-#endif //GROUND1_H
+#endif // GROUND1_H
