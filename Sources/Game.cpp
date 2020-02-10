@@ -511,7 +511,7 @@ void Game::updateCollisions() {
   for (enemy_iter = enemiesArray.begin(); enemy_iter != enemiesArray.end();
        enemy_iter++) {
     if (player_enemy_collision_timer.asMilliseconds() >=
-        1000){
+        1000) {
       if (player->rect.getGlobalBounds().intersects(
               enemiesArray[counter]->rect.getGlobalBounds())) {
         if (!enemiesArray[counter]->isAgro) {
