@@ -35,10 +35,11 @@ matrix:
 
 script:
   - git submodule update --init --recursive
-  - sudo apt install -y libfreetype6-dev libxrandr-dev libudev-dev libogg-dev libflac-dev libvorbis-dev libopenal-dev
+  - sudo apt-get install -y libfreetype6-dev libxrandr-dev libudev-dev libogg-dev libflac-dev libvorbis-dev libopenal-dev
   - sudo ln -s /usr/bin/gcc-8 /usr/local/bin/gcc
   - sudo ln -s /usr/bin/g++-8 /usr/local/bin/g++
   - mkdir -p .build
   - cd .build
   - cmake .. -DBUILD_TESTS=On
   - cmake --build .
+  - ./.build/runGameTests
