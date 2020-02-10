@@ -19,7 +19,6 @@ services:
 before_script:
   - echo $(pwd)
   - ls -la
-  - ls -la Content
   - docker build . --tag RPG_GAME_lin
 
 jobs:
