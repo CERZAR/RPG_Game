@@ -272,9 +272,9 @@ void Map::checkBulletCollision(Object *target) {
         {
           vector[counter]->isExist = false;
         }
-      } else
-        if (vector[counter]->type == WALL)
+      } else if (vector[counter]->type == WALL) {
         target->isExist = false;
+      }
     }
     counter++;
   }
