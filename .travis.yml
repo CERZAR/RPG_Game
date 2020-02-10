@@ -17,6 +17,7 @@ services:
   - docker
 
 before_script:
+  - chmod 755 scripts/*.sh
   - echo $(pwd)
   - ls -la
 
@@ -24,7 +25,7 @@ jobs:
   include:
     - name: "tests"
       script:
-        - docker run --rm -t -v $(pwd):/RPG_GAME_lin scripts/tests.sh
+        - docker run --rm -t -v $(pwd):/scripts/tests.sh
 #        - git submodule update --init --recursive
 #        - sudo apt-get install -y libfreetype6-dev libxrandr-dev libudev-dev libogg-dev libflac-dev libvorbis-dev libopenal-dev
 #        - sudo ln -s /usr/bin/gcc-8 /usr/local/bin/gcc
