@@ -42,4 +42,4 @@ script:
   - cd .build
   - cmake .. -DBUILD_TESTS=On
   - cmake --build .
-  - ./.build/runGameTests
+  - ./runGameTests
