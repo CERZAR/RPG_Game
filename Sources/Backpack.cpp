@@ -352,11 +352,10 @@ void Backpack::update(Player *player) {
         std::to_string(static_cast<int>(player->currentWeapon->lifetime /
         1000)));
     backpackTextArray[17]->setPosition(x + 820, y + 440);
-    if (player->currentWeapon->level == 5)
-    {
+    if (player->currentWeapon->level == 5){
       backpackTextArray[17]->setCharacterSize(17);
       backpackTextArray[17]->setString("UPGRATE COST: MAX");
-    } else{
+    } else {
       backpackTextArray[17]->setString(
           "UPGRATE COST: " + std::to_string(player->currentWeapon->upgateCost));
     }
@@ -380,11 +379,10 @@ void Backpack::update(Player *player) {
       "FLIGHT TIME: " +
       std::to_string(static_cast<int>(player->currentWeapon->lifetime / 1000)));
   backpackTextArray[23]->setPosition(x + 820, y + 190);
-  if (player->currentWeapon->level == 5)
-  {
+  if (player->currentWeapon->level == 5){
     backpackTextArray[23]->setCharacterSize(17);
     backpackTextArray[23]->setString("UPGRATE COST: MAX");
-  } else{
+  } else {
     backpackTextArray[23]->setString(
         "UPGRATE COST: " + std::to_string(player->currentWeapon->upgateCost));
   }
