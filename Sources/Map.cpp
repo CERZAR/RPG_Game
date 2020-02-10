@@ -88,9 +88,8 @@ void Map::createMap() {
   startX += tileSize;
   startY += tileSize;
   endX =
-      static_cast<int>(vector[(static_cast<int>(vector.size()) - 1]->rect
-      .getPosition().x -
-      tileSize);
+      static_cast<int>(vector[(int)vector.size() - 1]->rect.getPosition().x) -
+      tileSize;
   endY = static_cast<int>(vector[vector.size() - 1]->rect.getPosition().y) -
          tileSize;
 }
@@ -143,8 +142,7 @@ void Map::checkPlayerCollision(Object *target) {
               vector[counter]->rect.getGlobalBounds().left +
                   vector[counter]->rect.getGlobalBounds().width,
               target->rect.getGlobalBounds().top);
-        else if (target->direction == -3 || target->direction == -4)
-        {
+        else if (target->direction == -3 || target->direction == -4) {
           target->rect.setPosition(target->rect.getGlobalBounds().left,
                                    vector[counter]->rect.getGlobalBounds().top -
                                        target->rect.getGlobalBounds().height);
@@ -180,8 +178,7 @@ void Map::checkPlayerCollision(Object *target) {
               vector[counter]->rect.getGlobalBounds().left +
                   vector[counter]->rect.getGlobalBounds().width,
               target->rect.getGlobalBounds().top);
-        else if (target->direction == -1 || target->direction == -2)
-        {
+        else if (target->direction == -1 || target->direction == -2) {
           target->rect.setPosition(
               target->rect.getGlobalBounds().left,
               vector[counter]->rect.getGlobalBounds().top +
@@ -263,16 +260,13 @@ void Map::checkBulletCollision(Object *target) {
   for (iter = vector.begin(); iter != vector.end(); iter++) {
     if (target->rect.getGlobalBounds().intersects(
             vector[counter]->rect.getGlobalBounds())) {
-      if (vector[counter]->type == BOX)
-      {
+      if (vector[counter]->type == BOX) {
         vector[counter]->hp--;
         target->isExist = false;
-        if (vector[counter]->hp <= 0)
-        {
+        if (vector[counter]->hp <= 0) {
           vector[counter]->isExist = false;
         }
-      } else
-        if (vector[counter]->type == WALL)
+      } else if (vector[counter]->type == WALL)
         target->isExist = false;
     }
     counter++;

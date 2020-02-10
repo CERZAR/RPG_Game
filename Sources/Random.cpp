@@ -1,28 +1,21 @@
 // Copyright 2019 CERZAR
 #include "../Headers/Random.h"
-#include <stdlib.h>
-#include <ctime>
+
 int GenerateRandomInt(int max) {
-  uint *s = new uint;
-  *s = (uint)time(0);
-  int randomNumber = rand_r(s);
-  float random = randomNumber % max + 1;
-  int myRandom = random;
+  int randomNumber = rand();
+  float random = static_cast<float>(randomNumber % max) + 1;
+  int myRandom = static_cast<int>(random);
   return myRandom;
 }
 
 float GenerateRandomFloat(float min, float max) {
-  uint *s = new uint;
-  *s = (uint)time(0);
-  float f = (float)rand_r(s) / RAND_MAX;
+  float f = (float)rand() / RAND_MAX;
   return min + f * (max - min);
 }
 
 int GenerateRandomInt0(int max) {
-  uint *s = new uint;
-  *s = (uint)time(0);
-  int randomNumber = rand_r(s);
-  float random = randomNumber % max;
-  int myRandom = random;
+  int randomNumber = rand();
+  float random = static_cast<float>(randomNumber % max);
+  int myRandom = static_cast<int>(random);
   return myRandom;
 }
