@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_MUTEX_HPP
-#define SFML_MUTEX_HPP
+#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_MUTEX_HPP_
+#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_MUTEX_HPP_
 
 ////////////////////////////////////////////////////////////
 // Headers
@@ -85,7 +85,7 @@ private:
 
 } // namespace sf
 
-#endif // SFML_MUTEX_HPP
+#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_MUTEX_HPP_
 
 ////////////////////////////////////////////////////////////
 /// \class sf::Mutex

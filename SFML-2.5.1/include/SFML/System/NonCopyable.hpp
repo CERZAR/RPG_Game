@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_NONCOPYABLE_HPP
-#define SFML_NONCOPYABLE_HPP
+#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_NONCOPYABLE_HPP_
+#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_NONCOPYABLE_HPP_
 
 ////////////////////////////////////////////////////////////
 // Headers
@@ -87,7 +87,7 @@ private:
 
 } // namespace sf
 
-#endif // SFML_NONCOPYABLE_HPP
+#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_NONCOPYABLE_HPP_
 
 ////////////////////////////////////////////////////////////
 /// \class sf::NonCopyable

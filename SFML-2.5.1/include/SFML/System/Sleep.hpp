@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_SLEEP_HPP
-#define SFML_SLEEP_HPP
+#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_SLEEP_HPP_
+#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_SLEEP_HPP_
 
 ////////////////////////////////////////////////////////////
 // Headers
@@ -47,4 +47,4 @@ void SFML_SYSTEM_API sleep(Time duration);
 
 } // namespace sf
 
-#endif // SFML_SLEEP_HPP
+#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_SLEEP_HPP_

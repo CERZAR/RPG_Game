@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_MEMORYINPUTSTREAM_HPP
-#define SFML_MEMORYINPUTSTREAM_HPP
+#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_MEMORYINPUTSTREAM_HPP_
+#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_MEMORYINPUTSTREAM_HPP_
 
 ////////////////////////////////////////////////////////////
 // Headers
@@ -107,7 +107,7 @@ private:
 
 } // namespace sf
 
-#endif // SFML_MEMORYINPUTSTREAM_HPP
+#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_MEMORYINPUTSTREAM_HPP_
 
 ////////////////////////////////////////////////////////////
 /// \class sf::MemoryInputStream

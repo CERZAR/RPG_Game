@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_NATIVEACTIVITY_HPP
-#define SFML_NATIVEACTIVITY_HPP
+#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_NATIVEACTIVITY_HPP_
+#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_NATIVEACTIVITY_HPP_
 
 ////////////////////////////////////////////////////////////
 // Headers
@@ -55,4 +55,4 @@ SFML_SYSTEM_API ANativeActivity *getNativeActivity();
 
 } // namespace sf
 
-#endif // SFML_NATIVEACTIVITY_HPP
+#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_NATIVEACTIVITY_HPP_

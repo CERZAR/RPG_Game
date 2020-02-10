@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_TIME_HPP
-#define SFML_TIME_HPP
+#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_TIME_HPP_
+#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_TIME_HPP_
 
 ////////////////////////////////////////////////////////////
 // Headers
@@ -83,7 +83,9 @@ public:
 
 private:
   friend SFML_SYSTEM_API Time seconds(float);
+
   friend SFML_SYSTEM_API Time milliseconds(Int32);
+
   friend SFML_SYSTEM_API Time microseconds(Int64);
 
   ////////////////////////////////////////////////////////////
@@ -433,7 +435,7 @@ SFML_SYSTEM_API Time &operator%=(Time &left, Time right);
 
 } // namespace sf
 
-#endif // SFML_TIME_HPP
+#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_TIME_HPP_
 
 ////////////////////////////////////////////////////////////
 /// \class sf::Time

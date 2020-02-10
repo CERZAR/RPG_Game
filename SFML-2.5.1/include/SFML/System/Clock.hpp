@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_CLOCK_HPP
-#define SFML_CLOCK_HPP
+#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_CLOCK_HPP_
+#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_CLOCK_HPP_
 
 ////////////////////////////////////////////////////////////
 // Headers
@@ -79,7 +79,7 @@ private:
 
 } // namespace sf
 
-#endif // SFML_CLOCK_HPP
+#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_CLOCK_HPP_
 
 ////////////////////////////////////////////////////////////
 /// \class sf::Clock

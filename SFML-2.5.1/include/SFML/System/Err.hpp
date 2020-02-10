@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_ERR_HPP
-#define SFML_ERR_HPP
+#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_ERR_HPP_
+#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_ERR_HPP_
 
 ////////////////////////////////////////////////////////////
 // Headers
@@ -41,7 +41,7 @@ SFML_SYSTEM_API std::ostream &err();
 
 } // namespace sf
 
-#endif // SFML_ERR_HPP
+#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_ERR_HPP_
 
 ////////////////////////////////////////////////////////////
 /// \fn sf::err

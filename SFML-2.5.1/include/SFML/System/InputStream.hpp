@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_INPUTSTREAM_HPP
-#define SFML_INPUTSTREAM_HPP
+#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_INPUTSTREAM_HPP_
+#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_INPUTSTREAM_HPP_
 
 ////////////////////////////////////////////////////////////
 // Headers
@@ -88,7 +88,7 @@ public:
 
 } // namespace sf
 
-#endif // SFML_INPUTSTREAM_HPP
+#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_INPUTSTREAM_HPP_
 
 ////////////////////////////////////////////////////////////
 /// \class sf::InputStream

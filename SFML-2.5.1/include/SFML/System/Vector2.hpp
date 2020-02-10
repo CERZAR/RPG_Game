@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_VECTOR2_HPP
-#define SFML_VECTOR2_HPP
+#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_VECTOR2_HPP_
+#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_VECTOR2_HPP_
 
 namespace sf {
 ////////////////////////////////////////////////////////////
@@ -245,7 +245,7 @@ typedef Vector2<float> Vector2f;
 
 } // namespace sf
 
-#endif // SFML_VECTOR2_HPP
+#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_VECTOR2_HPP_
 
 ////////////////////////////////////////////////////////////
 /// \class sf::Vector2

@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_THREADLOCAL_HPP
-#define SFML_THREADLOCAL_HPP
+#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_THREADLOCAL_HPP_
+#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_THREADLOCAL_HPP_
 
 ////////////////////////////////////////////////////////////
 // Headers
@@ -50,7 +50,7 @@ public:
   /// \param value Optional value to initialize the variable
   ///
   ////////////////////////////////////////////////////////////
-  ThreadLocal(void *value = NULL);
+  explicit ThreadLocal(void *value = NULL);
 
   ////////////////////////////////////////////////////////////
   /// \brief Destructor
@@ -83,7 +83,7 @@ private:
 
 } // namespace sf
 
-#endif // SFML_THREADLOCAL_HPP
+#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_THREADLOCAL_HPP_
 
 ////////////////////////////////////////////////////////////
 /// \class sf::ThreadLocal

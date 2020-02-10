@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_SYSTEM_EXPORT_HPP
-#define SFML_SYSTEM_EXPORT_HPP
+#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_EXPORT_HPP_
+#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_EXPORT_HPP_
 
 ////////////////////////////////////////////////////////////
 // Headers
@@ -44,4 +44,4 @@
 
 #endif
 
-#endif // SFML_SYSTEM_EXPORT_HPP
+#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_EXPORT_HPP_
