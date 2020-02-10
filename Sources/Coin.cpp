@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/Coin.h"
 
 Coin::Coin(ResourcesContainer *res) : Item::Item(res) {

@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/Random.h"
 #include <stdlib.h>
 #include <ctime>

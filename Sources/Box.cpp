@@ -1,3 +1,4 @@
+// Copyright 2019 CERZAR
 #include "../Headers/Box.h"
 
 Box::Box(sf::Sprite *sprite, float x, float y)

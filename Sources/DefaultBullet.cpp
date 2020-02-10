@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/DefaultBullet.h"
 
 DefaultBullet::DefaultBullet(int damage, float speed, int direction,

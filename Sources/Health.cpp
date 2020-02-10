@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/Health.h"
 
 Health::Health(ResourcesContainer *res) : Item::Item(res) {

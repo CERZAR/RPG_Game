@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/ResourcesContainer.h"
 
 ResourcesContainer::ResourcesContainer() {

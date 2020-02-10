@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/MapObject.h"
 
 MapObject::MapObject(sf::Sprite *sprite, float x, float y) {

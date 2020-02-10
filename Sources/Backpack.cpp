@@ -1,3 +1,4 @@
+// Copyright 2019 CERZAR
 #include "../Headers/Backpack.h"
 
 void Backpack::updatePress() {}
@@ -343,11 +344,13 @@ void Backpack::update(Player *player) {
         "ATACK SPEED: " + std::to_string(player->currentWeapon->atackSpeed));
     backpackTextArray[15]->setPosition(x + 820, y + 390);
     backpackTextArray[15]->setString(
-        "BULLET SPEED: " + std::to_string((int)player->currentWeapon->speed));
+        "BULLET SPEED: " + std::to_string(static_cast<int>
+                                          (player->currentWeapon->speed)));
     backpackTextArray[16]->setPosition(x + 820, y + 415);
     backpackTextArray[16]->setString(
         "FLIGHT TIME: " +
-        std::to_string((int)player->currentWeapon->lifetime / 1000));
+        std::to_string(static_cast<int>(player->currentWeapon->lifetime /
+        1000)));
     backpackTextArray[17]->setPosition(x + 820, y + 440);
     if (player->currentWeapon->level == 5)
     {
@@ -369,16 +372,19 @@ void Backpack::update(Player *player) {
       "ATACK SPEED: " + std::to_string(player->currentWeapon->atackSpeed));
   backpackTextArray[21]->setPosition(x + 820, y + 140);
   backpackTextArray[21]->setString(
-      "BULLET SPEED: " + std::to_string((int)player->currentWeapon->speed));
+      "BULLET SPEED: " + std::to_string(static_cast<int>
+                                        (player->currentWeapon->speed)));
   backpackTextArray[22]->setPosition(x + 820, y + 165);
   backpackTextArray[22]->setString(
       "FLIGHT TIME: " +
-      std::to_string((int)player->currentWeapon->lifetime / 1000));
+      std::to_string(static_cast<int>(player->currentWeapon->lifetime / 1000)));
   backpackTextArray[23]->setPosition(x + 820, y + 190);
-  if (player->currentWeapon->level == 5) {
+  if (player->currentWeapon->level == 5)
+  {
     backpackTextArray[23]->setCharacterSize(17);
     backpackTextArray[23]->setString("UPGRATE COST: MAX");
-  } else
+  }
+  else
     backpackTextArray[23]->setString(
         "UPGRATE COST: " + std::to_string(player->currentWeapon->upgateCost));
 }

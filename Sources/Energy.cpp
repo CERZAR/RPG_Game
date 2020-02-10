@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/Energy.h"
 
 Energy::Energy(ResourcesContainer *res) : Item::Item(res) {

@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/GroundWall.h"
 
 GroundWall::GroundWall(sf::Sprite *sprite, float x, float y)

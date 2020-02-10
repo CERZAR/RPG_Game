@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/DiamondWall.h"
 
 DiamondWall::DiamondWall(sf::Sprite *sprite, float x, float y)

@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/DefaultWeapon.h"
 
 DefaultWeapon::DefaultWeapon(ResourcesContainer *res) : Weapon::Weapon(res) {

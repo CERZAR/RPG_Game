@@ -1,6 +1,4 @@
-//
-// Created by cezar on 06.02.2020.
-//
+// Copyright 2019 CERZAR
 
 #include "../Packages/googletest/googletest/include/gtest/gtest.h"
 

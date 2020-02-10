@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/SteelWall.h"
 
 SteelWall::SteelWall(sf::Sprite *sprite, float x, float y)

@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/Ground2.h"
 
 Ground2::Ground2(sf::Sprite *sprite, float x, float y)

@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/textDisplay.h"
 
 textDisplay::textDisplay(const std::string &text, const std::string &font_path,

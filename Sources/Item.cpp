@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/Item.h"
 
 Item::Item(ResourcesContainer *res) { this->resContainter = res; }

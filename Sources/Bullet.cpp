@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/Bullet.h"
 
 Bullet::Bullet(ResourcesContainer *res) : Object::Object(res) {

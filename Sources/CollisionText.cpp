@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/CollisionText.h"
 
 CollisionText::CollisionText(std::string text, std::string font_path, int size,

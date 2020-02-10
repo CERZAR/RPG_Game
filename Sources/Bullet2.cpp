@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/Bullet2.h"
 
 Bullet2::Bullet2(int damage, float speed, int direction, float lifetime,

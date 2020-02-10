@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/Bullet4.h"
 
 Bullet4::Bullet4(int damage, float speed, int direction, float lifetime,

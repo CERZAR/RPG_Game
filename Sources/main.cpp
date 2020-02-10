@@ -1,4 +1,5 @@
-/**
+// Copyright 2019 CERZAR
+ /**
  * @file main.cpp
  * @brief main
  */

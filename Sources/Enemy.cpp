@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/Enemy.h"
 
 void Enemy::initVariables() {

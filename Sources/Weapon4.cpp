@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/Weapon4.h"
 
 Weapon4::Weapon4(ResourcesContainer *res) : Weapon::Weapon(res) {

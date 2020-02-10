@@ -1,3 +1,4 @@
+// Copyright 2019 CERZAR
 #include "../Headers/Game.h"
 
 void Game::initVariables() {
