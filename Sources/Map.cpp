@@ -1,4 +1,4 @@
-
+// Copyright 2019 CERZAR
 #include "../Headers/Map.h"
 
 void Map::init_map_vector() {}
