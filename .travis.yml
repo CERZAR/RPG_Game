@@ -34,8 +34,11 @@ jobs:
         - cmake .. -DBUILD_TESTS=On
         - cd ..
         - cmake --build .build
-        - ./.build/tests
+        - ./.build/GameTests
 #        - cmake --build .
     - name: "checks"
       script:
         - docker run -v `pwd`:`pwd` -w `pwd` --cap-add=SYS_PTRACE -t rusdevops/bootstrap-cpp scripts/checks.sh
+    - name: "coverage"
+      script:
+        - docker run -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/coverage.sh

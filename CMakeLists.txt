@@ -4,6 +4,7 @@ set(This RPG_GAME)
 project(${This})
 
 option(BUILD_TESTS Off)
+option(BUILD_COVERAGE Off)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -113,4 +114,17 @@ target_link_libraries(runGameTests gtest gtest_main sfml-graphics sfml-window sf
 
 add_test(NAME unit_tests COMMAND tests)
 
+endif()
+
+#coverage
+if (BUILD_COVERAGE)
+    set(ENABLE_COVERAGE ON CACHE BOOL "Enable coverage build." FORCE)
+    list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+    find_package(codecov)
+
+    add_coverage(${PROJECT_NAME})
+    add_coverage(tests)
+
+    list(APPEND LCOV_REMOVE_PATTERNS "'${PROJECT_SOURCE_DIR}/tests/*'")
+    coverage_evaluate()
 endif()
