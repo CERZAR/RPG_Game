@@ -17,7 +17,7 @@ matrix:
             - gcc-8
             - g++-8
             - cmake
-#
+
 script:
   - git submodule update --init --recursive
   - sudo apt-get install -y libfreetype6-dev libxrandr-dev libudev-dev libogg-dev libflac-dev libvorbis-dev libopenal-dev
