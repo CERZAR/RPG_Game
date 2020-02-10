@@ -4,7 +4,7 @@ set(This RPG_GAME)
 project(${This})
 
 option(BUILD_TESTS Off)
-option(BUILD_COVERAGE "Build coverage" ON)
+option(BUILD_COVERAGE "Build coverage" OFF)
 
 set(CMAKE_CXX_STANDARD 17)
 
