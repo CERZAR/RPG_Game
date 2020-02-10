@@ -104,15 +104,16 @@ enable_testing()
 add_subdirectory(Packages/googletest)
 include_directories(Packages/googletest/googletest/include)
 
-add_executable(runGameTests
-        tests/GameTests.cpp
+add_executable(tests
+        tests/tests.cpp
         ${Sources}
         ${Headers}
         )
 
-target_link_libraries(runGameTests gtest gtest_main sfml-graphics sfml-window sfml-system)
+target_link_libraries(tests gtest gtest_main sfml-graphics
+        sfml-window sfml-system)
 
-add_test(NAME unit_tests COMMAND tests)
+add_test(NAME tests COMMAND tests)
 
 endif()
 
