@@ -1,4 +1,17 @@
+os: linux
+dist: xenial
+sudo: true
+compiler: gcc
 language: cpp
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - gcc-8
+      - g++-8
+      - cmake
 
 services:
   - docker
@@ -6,18 +19,6 @@ services:
 jobs:
   include:
     - name: tests
-      os: linux
-      dist: xenial
-      sudo: true
-      compiler: gcc
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - gcc-8
-            - g++-8
-            - cmake
       script:
         - git submodule update --init --recursive
         - sudo apt-get install -y libfreetype6-dev libxrandr-dev libudev-dev libogg-dev libflac-dev libvorbis-dev libopenal-dev
@@ -27,5 +28,3 @@ jobs:
         - cd .build
         - cmake .. -DBUILD_TESTS=On
         - cmake --build .
-    - name: checks
-      script: {TRAVIS_BUILD_DIR}/scripts/checks.sh
