@@ -19,8 +19,8 @@ services:
 
 jobs:
   include:
-    - stage: test
-      name: test
+    - stage: tests
+      name: tests
       script:
         - git submodule update --init --recursive
         - sudo apt-get install -y libfreetype6-dev libxrandr-dev libudev-dev libogg-dev libflac-dev libvorbis-dev libopenal-dev
@@ -32,4 +32,4 @@ jobs:
         - cmake --build .
 
 stages:
-  - test
+  - tests
