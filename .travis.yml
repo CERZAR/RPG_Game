@@ -27,3 +27,5 @@ jobs:
         - cd .build
         - cmake .. -DBUILD_TESTS=On
         - cmake --build .
+    - name: checks
+      script: {TRAVIS_BUILD_DIR}/scripts/checks.sh
