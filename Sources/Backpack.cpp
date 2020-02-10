@@ -356,9 +356,10 @@ void Backpack::update(Player *player) {
     {
       backpackTextArray[17]->setCharacterSize(17);
       backpackTextArray[17]->setString("UPGRATE COST: MAX");
-    } else
+    } else{
       backpackTextArray[17]->setString(
           "UPGRATE COST: " + std::to_string(player->currentWeapon->upgateCost));
+    }
   }
 
   backpackTextArray[18]->setPosition(x + 820, y + 65);
@@ -383,9 +384,10 @@ void Backpack::update(Player *player) {
   {
     backpackTextArray[23]->setCharacterSize(17);
     backpackTextArray[23]->setString("UPGRATE COST: MAX");
-  } else
+  } else{
     backpackTextArray[23]->setString(
         "UPGRATE COST: " + std::to_string(player->currentWeapon->upgateCost));
+  }
 }
 
 void Backpack::render(sf::RenderTarget *target) {
