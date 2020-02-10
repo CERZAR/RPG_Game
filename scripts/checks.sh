@@ -7,7 +7,7 @@
 #echo "$files" | xargs cpplint --filter=$filter
 #export CTEST_OUTPUT_ON_FAILURE=true
 
-clang-tidy Sources/bullet.cpp -checks=*,\
+clang-tidy Sources/Game.cpp -checks=*,\
 -android-*,\
 -bugprone-bool-pointer-implicit-conversion,\
 -bugprone-exception-escape,\
