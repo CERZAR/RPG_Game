@@ -28,5 +28,4 @@ jobs:
         - cmake .. -DBUILD_TESTS=On
         - cmake --build .
     - name: checks
-      script:
-        - bash ./scripts/checks.sh
+      script: ./scripts/checks.sh
