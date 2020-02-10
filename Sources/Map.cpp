@@ -88,7 +88,8 @@ void Map::createMap() {
   startX += tileSize;
   startY += tileSize;
   endX =
-      static_cast<int>(vector[(int)vector.size() - 1]->rect.getPosition().x -
+      static_cast<int>(vector[(static_cast<int>(vector.size()) - 1]->rect
+      .getPosition().x -
       tileSize);
   endY = static_cast<int>(vector[vector.size() - 1]->rect.getPosition().y) -
          tileSize;
@@ -270,8 +271,8 @@ void Map::checkBulletCollision(Object *target) {
         {
           vector[counter]->isExist = false;
         }
-      }
-      else if (vector[counter]->type == WALL)
+      } else
+        if (vector[counter]->type == WALL)
         target->isExist = false;
     }
     counter++;

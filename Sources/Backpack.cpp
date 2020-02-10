@@ -356,7 +356,8 @@ void Backpack::update(Player *player) {
     {
       backpackTextArray[17]->setCharacterSize(17);
       backpackTextArray[17]->setString("UPGRATE COST: MAX");
-    } else
+    }
+    else
       backpackTextArray[17]->setString(
           "UPGRATE COST: " + std::to_string(player->currentWeapon->upgateCost));
   }
