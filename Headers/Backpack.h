@@ -13,41 +13,45 @@
 /**
  * @brief backpack class
  */
-class Backpack
-{
+class Backpack {
 private:
-	Player* player{};
-	ResourcesContainer* resContainter;
-	float x{};
-	float y{};
-	int counter{};
-	std::vector<sf::Text*>::const_iterator backpackText_iter;
-	std::vector<sf::Text*> backpackTextArray;
-	std::vector<sf::Shape*>::const_iterator backpackShape_iter;
-	std::vector<sf::Shape*> backpackShapeArray;
+    Player *player{};
+    ResourcesContainer *resContainter;
+    float x{};
+    float y{};
+    int counter{};
+    std::vector<sf::Text *>::const_iterator backpackText_iter;
+    std::vector<sf::Text *> backpackTextArray;
+    std::vector<sf::Shape *>::const_iterator backpackShape_iter;
+    std::vector<sf::Shape *> backpackShapeArray;
 
-	sf::Sprite icon;
-	sf::Sprite* iconCurrentWeapon{};
-	sf::Sprite* iconSecondWeapon{};
+    sf::Sprite icon;
+    sf::Sprite *iconCurrentWeapon{};
+    sf::Sprite *iconSecondWeapon{};
 
 public:
-	/**
+    /**
  * @brief Method updatating pressings
  */
-	static  void updatePress();
-	explicit Backpack(ResourcesContainer* res);
-	virtual ~Backpack();
-	/**
+    static void updatePress();
+
+    explicit Backpack(ResourcesContainer *res);
+
+    virtual ~Backpack();
+
+    /**
  * @brief Method setting backpack position 
  */
-	void setPosition(float x, float y);
-	/**
+    void setPosition(float x, float y);
+
+    /**
  * @brief Method updateing backpack
  */
-	void update(Player* player);
-	/**
+    void update(Player *player);
+
+    /**
  * @brief Method rendering backpack
  */
-	void render(sf::RenderTarget* target);
+    void render(sf::RenderTarget *target);
 };
 

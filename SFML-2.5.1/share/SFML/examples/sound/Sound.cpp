@@ -11,8 +11,7 @@
 /// Play a sound
 ///
 ////////////////////////////////////////////////////////////
-void playSound()
-{
+void playSound() {
     // Load a sound buffer from a wav file
     sf::SoundBuffer buffer;
     if (!buffer.loadFromFile("resources/canary.wav"))
@@ -20,22 +19,23 @@ void playSound()
 
     // Display sound informations
     std::cout << "canary.wav:" << std::endl;
-    std::cout << " " << buffer.getDuration().asSeconds() << " seconds"       << std::endl;
-    std::cout << " " << buffer.getSampleRate()           << " samples / sec" << std::endl;
-    std::cout << " " << buffer.getChannelCount()         << " channels"      << std::endl;
+    std::cout << " " << buffer.getDuration().asSeconds() << " seconds"
+              << std::endl;
+    std::cout << " " << buffer.getSampleRate() << " samples / sec" << std::endl;
+    std::cout << " " << buffer.getChannelCount() << " channels" << std::endl;
 
     // Create a sound instance and play it
     sf::Sound sound(buffer);
     sound.play();
 
     // Loop while the sound is playing
-    while (sound.getStatus() == sf::Sound::Playing)
-    {
+    while (sound.getStatus() == sf::Sound::Playing) {
         // Leave some CPU time for other processes
         sf::sleep(sf::milliseconds(100));
 
         // Display the playing position
-        std::cout << "\rPlaying... " << sound.getPlayingOffset().asSeconds() << " sec        ";
+        std::cout << "\rPlaying... " << sound.getPlayingOffset().asSeconds()
+                  << " sec        ";
         std::cout << std::flush;
     }
     std::cout << std::endl << std::endl;
@@ -46,8 +46,7 @@ void playSound()
 /// Play a music
 ///
 ////////////////////////////////////////////////////////////
-void playMusic(const std::string& filename)
-{
+void playMusic(const std::string &filename) {
     // Load an ogg music file
     sf::Music music;
     if (!music.openFromFile("resources/" + filename))
@@ -55,21 +54,22 @@ void playMusic(const std::string& filename)
 
     // Display music informations
     std::cout << filename << ":" << std::endl;
-    std::cout << " " << music.getDuration().asSeconds() << " seconds"       << std::endl;
-    std::cout << " " << music.getSampleRate()           << " samples / sec" << std::endl;
-    std::cout << " " << music.getChannelCount()         << " channels"      << std::endl;
+    std::cout << " " << music.getDuration().asSeconds() << " seconds"
+              << std::endl;
+    std::cout << " " << music.getSampleRate() << " samples / sec" << std::endl;
+    std::cout << " " << music.getChannelCount() << " channels" << std::endl;
 
     // Play it
     music.play();
 
     // Loop while the music is playing
-    while (music.getStatus() == sf::Music::Playing)
-    {
+    while (music.getStatus() == sf::Music::Playing) {
         // Leave some CPU time for other processes
         sf::sleep(sf::milliseconds(100));
 
         // Display the playing position
-        std::cout << "\rPlaying... " << music.getPlayingOffset().asSeconds() << " sec        ";
+        std::cout << "\rPlaying... " << music.getPlayingOffset().asSeconds()
+                  << " sec        ";
         std::cout << std::flush;
     }
     std::cout << std::endl << std::endl;
@@ -82,8 +82,7 @@ void playMusic(const std::string& filename)
 /// \return Application exit code
 ///
 ////////////////////////////////////////////////////////////
-int main()
-{
+int main() {
     // Play a sound
     playSound();
 

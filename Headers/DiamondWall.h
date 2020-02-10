@@ -2,12 +2,13 @@
 #define DIAMONDWALL_H
 
 #include "MapObject.h"
+
 class DiamondWall :
-	public MapObject
-{
+        public MapObject {
 public:
-	DiamondWall(sf::Sprite* sprite, float x, float y);
-	virtual ~DiamondWall();
+    DiamondWall(sf::Sprite *sprite, float x, float y);
+
+    virtual ~DiamondWall();
 };
 
 #endif //DIAMONDWALL_H

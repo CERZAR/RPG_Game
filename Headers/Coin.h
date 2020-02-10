@@ -4,16 +4,17 @@
 #include "Item.h"
 
 class Coin :
-	public Item
-{
+        public Item {
 private:
-	// Variables
-	int counterAnimation = 1;
-	int animationSlow = 0;
+    // Variables
+    int counterAnimation = 1;
+    int animationSlow = 0;
 public:
-	Coin(ResourcesContainer* res);
-	virtual ~Coin();
-	void update();
+    Coin(ResourcesContainer *res);
+
+    virtual ~Coin();
+
+    void update();
 };
 
 

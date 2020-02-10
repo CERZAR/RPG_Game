@@ -16,8 +16,7 @@
 /// \param Window Target window to initialize
 ///
 ////////////////////////////////////////////////////////////
-void initialize(sf::Window& window)
-{
+void initialize(sf::Window &window) {
     // Activate the window
     window.setActive();
 
@@ -50,8 +49,7 @@ void initialize(sf::Window& window)
 /// \param elapsedTime Time elapsed since the last draw
 ///
 ////////////////////////////////////////////////////////////
-void draw(sf::Window& window, float elapsedTime)
-{
+void draw(sf::Window &window, float elapsedTime) {
     // Activate the window
     window.setActive();
 
@@ -68,50 +66,50 @@ void draw(sf::Window& window, float elapsedTime)
 
     // Define a 3D cube (6 faces made of 2 triangles composed by 3 vertices)
     static const GLfloat cube[] =
-    {
-        // positions    // colors
-        -50, -50, -50,  1, 1, 0,
-        -50,  50, -50,  1, 1, 0,
-        -50, -50,  50,  1, 1, 0,
-        -50, -50,  50,  1, 1, 0,
-        -50,  50, -50,  1, 1, 0,
-        -50,  50,  50,  1, 1, 0,
+            {
+                    // positions    // colors
+                    -50, -50, -50, 1, 1, 0,
+                    -50, 50, -50, 1, 1, 0,
+                    -50, -50, 50, 1, 1, 0,
+                    -50, -50, 50, 1, 1, 0,
+                    -50, 50, -50, 1, 1, 0,
+                    -50, 50, 50, 1, 1, 0,
 
-         50, -50, -50,  1, 1, 0,
-         50,  50, -50,  1, 1, 0,
-         50, -50,  50,  1, 1, 0,
-         50, -50,  50,  1, 1, 0,
-         50,  50, -50,  1, 1, 0,
-         50,  50,  50,  1, 1, 0,
+                    50, -50, -50, 1, 1, 0,
+                    50, 50, -50, 1, 1, 0,
+                    50, -50, 50, 1, 1, 0,
+                    50, -50, 50, 1, 1, 0,
+                    50, 50, -50, 1, 1, 0,
+                    50, 50, 50, 1, 1, 0,
 
-        -50, -50, -50,  1, 0, 1,
-         50, -50, -50,  1, 0, 1,
-        -50, -50,  50,  1, 0, 1,
-        -50, -50,  50,  1, 0, 1,
-         50, -50, -50,  1, 0, 1,
-         50, -50,  50,  1, 0, 1,
+                    -50, -50, -50, 1, 0, 1,
+                    50, -50, -50, 1, 0, 1,
+                    -50, -50, 50, 1, 0, 1,
+                    -50, -50, 50, 1, 0, 1,
+                    50, -50, -50, 1, 0, 1,
+                    50, -50, 50, 1, 0, 1,
 
-        -50,  50, -50,  1, 0, 1,
-         50,  50, -50,  1, 0, 1,
-        -50,  50,  50,  1, 0, 1,
-        -50,  50,  50,  1, 0, 1,
-         50,  50, -50,  1, 0, 1,
-         50,  50,  50,  1, 0, 1,
+                    -50, 50, -50, 1, 0, 1,
+                    50, 50, -50, 1, 0, 1,
+                    -50, 50, 50, 1, 0, 1,
+                    -50, 50, 50, 1, 0, 1,
+                    50, 50, -50, 1, 0, 1,
+                    50, 50, 50, 1, 0, 1,
 
-        -50, -50, -50,  0, 1, 1,
-         50, -50, -50,  0, 1, 1,
-        -50,  50, -50,  0, 1, 1,
-        -50,  50, -50,  0, 1, 1,
-         50, -50, -50,  0, 1, 1,
-         50,  50, -50,  0, 1, 1,
+                    -50, -50, -50, 0, 1, 1,
+                    50, -50, -50, 0, 1, 1,
+                    -50, 50, -50, 0, 1, 1,
+                    -50, 50, -50, 0, 1, 1,
+                    50, -50, -50, 0, 1, 1,
+                    50, 50, -50, 0, 1, 1,
 
-        -50, -50,  50,  0, 1, 1,
-         50, -50,  50,  0, 1, 1,
-        -50,  50,  50,  0, 1, 1,
-        -50,  50,  50,  0, 1, 1,
-         50, -50,  50,  0, 1, 1,
-         50,  50,  50,  0, 1, 1
-    };
+                    -50, -50, 50, 0, 1, 1,
+                    50, -50, 50, 0, 1, 1,
+                    -50, 50, 50, 0, 1, 1,
+                    -50, 50, 50, 0, 1, 1,
+                    50, -50, 50, 0, 1, 1,
+                    50, 50, 50, 0, 1, 1
+            };
 
     // Draw the cube
     glVertexPointer(3, GL_FLOAT, 6 * sizeof(GLfloat), cube);
@@ -126,10 +124,9 @@ void draw(sf::Window& window, float elapsedTime)
 /// \return Error code
 ///
 ////////////////////////////////////////////////////////////
-int main()
-{
+int main() {
     // Open a connection with the X server
-    Display* display = XOpenDisplay(NULL);
+    Display *display = XOpenDisplay(NULL);
     if (!display)
         return EXIT_FAILURE;
 
@@ -139,7 +136,7 @@ int main()
     // Let's create the main window
     XSetWindowAttributes attributes;
     attributes.background_pixel = BlackPixel(display, screen);
-    attributes.event_mask       = KeyPressMask;
+    attributes.event_mask = KeyPressMask;
     Window window = XCreateWindow(display, RootWindow(display, screen),
                                   0, 0, 650, 330, 0,
                                   DefaultDepth(display, screen),
@@ -150,7 +147,7 @@ int main()
         return EXIT_FAILURE;
 
     // Set the window's name
-    XStoreName(display, window , "SFML Window");
+    XStoreName(display, window, "SFML Window");
 
     // Let's create the windows which will serve as containers for our SFML views
     Window view1 = XCreateWindow(display, window,
@@ -183,17 +180,14 @@ int main()
 
     // Start the event loop
     bool running = true;
-    while (running)
-    {
-        while (XPending(display))
-        {
+    while (running) {
+        while (XPending(display)) {
             // Get the next pending event
             XEvent event;
             XNextEvent(display, &event);
 
             // Process it
-            switch (event.type)
-            {
+            switch (event.type) {
                 // Any key is pressed: quit
                 case KeyPress:
                     running = false;

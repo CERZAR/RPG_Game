@@ -3,20 +3,26 @@
  * @brief A file containing a description of the weapon3 class
  */
 #pragma once
+
 #include "Weapon.h"
 #include "../Headers/Bullet3.h"
- /**
-  * @brief weapon3 class
-  */
+
+/**
+ * @brief weapon3 class
+ */
 class Weapon3 :
-	public Weapon
-{
+        public Weapon {
 public:
-	Weapon3(ResourcesContainer* res);
-	virtual ~Weapon3();
-	void update();
-	void render(sf::RenderTarget* target);
-	void updateStats();
-	Bullet* getBullet(int direction);
+    Weapon3(ResourcesContainer *res);
+
+    virtual ~Weapon3();
+
+    void update();
+
+    void render(sf::RenderTarget *target);
+
+    void updateStats();
+
+    Bullet *getBullet(int direction);
 };
 

@@ -7,7 +7,7 @@
 #include <iostream>
 
 
-const sf::Uint8 audioData   = 1;
+const sf::Uint8 audioData = 1;
 const sf::Uint8 endOfStream = 2;
 
 
@@ -15,8 +15,7 @@ const sf::Uint8 endOfStream = 2;
 /// Specialization of audio recorder for sending recorded audio
 /// data through the network
 ////////////////////////////////////////////////////////////
-class NetworkRecorder : public sf::SoundRecorder
-{
+class NetworkRecorder : public sf::SoundRecorder {
 public:
 
     ////////////////////////////////////////////////////////////
@@ -26,10 +25,9 @@ public:
     /// \param port Port of the remote host
     ///
     ////////////////////////////////////////////////////////////
-    NetworkRecorder(const sf::IpAddress& host, unsigned short port) :
-    m_host(host),
-    m_port(port)
-    {
+    NetworkRecorder(const sf::IpAddress &host, unsigned short port) :
+            m_host(host),
+            m_port(port) {
     }
 
     ////////////////////////////////////////////////////////////
@@ -38,8 +36,7 @@ public:
     /// \see SoundRecorder::~SoundRecorder()
     ///
     ////////////////////////////////////////////////////////////
-    ~NetworkRecorder()
-    {
+    ~NetworkRecorder() {
         // Make sure to stop the recording thread
         stop();
     }
@@ -50,15 +47,11 @@ private:
     /// \see SoundRecorder::onStart
     ///
     ////////////////////////////////////////////////////////////
-    virtual bool onStart()
-    {
-        if (m_socket.connect(m_host, m_port) == sf::Socket::Done)
-        {
+    virtual bool onStart() {
+        if (m_socket.connect(m_host, m_port) == sf::Socket::Done) {
             std::cout << "Connected to server " << m_host << std::endl;
             return true;
-        }
-        else
-        {
+        } else {
             return false;
         }
     }
@@ -67,8 +60,8 @@ private:
     /// \see SoundRecorder::onProcessSamples
     ///
     ////////////////////////////////////////////////////////////
-    virtual bool onProcessSamples(const sf::Int16* samples, std::size_t sampleCount)
-    {
+    virtual bool
+    onProcessSamples(const sf::Int16 *samples, std::size_t sampleCount) {
         // Pack the audio samples into a network packet
         sf::Packet packet;
         packet << audioData;
@@ -82,8 +75,7 @@ private:
     /// \see SoundRecorder::onStop
     ///
     ////////////////////////////////////////////////////////////
-    virtual void onStop()
-    {
+    virtual void onStop() {
         // Send a "end-of-stream" packet
         sf::Packet packet;
         packet << endOfStream;
@@ -96,9 +88,9 @@ private:
     ////////////////////////////////////////////////////////////
     // Member data
     ////////////////////////////////////////////////////////////
-    sf::IpAddress  m_host;   ///< Address of the remote host
+    sf::IpAddress m_host;   ///< Address of the remote host
     unsigned short m_port;   ///< Remote port
-    sf::TcpSocket  m_socket; ///< Socket used to communicate with the server
+    sf::TcpSocket m_socket; ///< Socket used to communicate with the server
 };
 
 
@@ -107,23 +99,20 @@ private:
 /// start sending him audio data
 ///
 ////////////////////////////////////////////////////////////
-void doClient(unsigned short port)
-{
+void doClient(unsigned short port) {
     // Check that the device can capture audio
-    if (!sf::SoundRecorder::isAvailable())
-    {
-        std::cout << "Sorry, audio capture is not supported by your system" << std::endl;
+    if (!sf::SoundRecorder::isAvailable()) {
+        std::cout << "Sorry, audio capture is not supported by your system"
+                  << std::endl;
         return;
     }
 
     // Ask for server address
     sf::IpAddress server;
-    do
-    {
+    do {
         std::cout << "Type address or name of the server to connect to: ";
-        std::cin  >> server;
-    }
-    while (server == sf::IpAddress::None);
+        std::cin >> server;
+    } while (server == sf::IpAddress::None);
 
     // Create an instance of our custom recorder
     NetworkRecorder recorder(server, port);

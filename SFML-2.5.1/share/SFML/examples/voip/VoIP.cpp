@@ -12,6 +12,7 @@
 // (I'm too lazy to put them into separate headers...)
 ////////////////////////////////////////////////////////////
 void doClient(unsigned short port);
+
 void doServer(unsigned short port);
 
 
@@ -21,23 +22,19 @@ void doServer(unsigned short port);
 /// \return Application exit code
 ///
 ////////////////////////////////////////////////////////////
-int main()
-{
+int main() {
     // Choose a random port for opening sockets (ports < 1024 are reserved)
     const unsigned short port = 2435;
 
     // Client or server ?
     char who;
     std::cout << "Do you want to be a server ('s') or a client ('c')? ";
-    std::cin  >> who;
+    std::cin >> who;
 
-    if (who == 's')
-    {
+    if (who == 's') {
         // Run as a server
         doServer(port);
-    }
-    else
-    {
+    } else {
         // Run as a client
         doClient(port);
     }

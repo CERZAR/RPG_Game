@@ -12,8 +12,7 @@
 ResourcesContainer res;
 Player player(&res);
 
-TEST(GameTests, playerUpdateStatsTest)
-{
+TEST(GameTests, playerUpdateStatsTest) {
     EXPECT_EQ(1, player.level);
     EXPECT_EQ(10, player.maxHP);
     EXPECT_EQ(10, player.maxMP);
@@ -37,15 +36,13 @@ TEST(GameTests, playerUpdateStatsTest)
     EXPECT_EQ(0, player.exp);
 };
 
-TEST(GameTests, playerUpdatePositionTest)
-{
+TEST(GameTests, playerUpdatePositionTest) {
     player.rect.setPosition(25.f, 25.f);
-    player.rect.move(1.f,1.f);
-    EXPECT_EQ(sf::Vector2f(26.f, 26.f),  player.rect.getPosition());
+    player.rect.move(1.f, 1.f);
+    EXPECT_EQ(sf::Vector2f(26.f, 26.f), player.rect.getPosition());
 }
 
-TEST(GameTests, mapCollisionTest)
-{
+TEST(GameTests, mapCollisionTest) {
     Map map(&res);
     map.createMap();
     player.rect.setPosition(25.f, 25.f);
@@ -54,12 +51,11 @@ TEST(GameTests, mapCollisionTest)
     EXPECT_FALSE(map.checkCollision(player.rect));
 }
 
-TEST(GameTests, PlayerEnemyCollisionTest)
-{
-    std::vector<Enemy*>::const_iterator enemy_iter;
-    std::vector<Enemy*> enemiesArray;
+TEST(GameTests, PlayerEnemyCollisionTest) {
+    std::vector<Enemy *>::const_iterator enemy_iter;
+    std::vector<Enemy *> enemiesArray;
 
-    Enemy* enemy = new GreenJelly(&res);
+    Enemy *enemy = new GreenJelly(&res);
     enemy->rect.setPosition(500.f, 500.f);
     enemy->hp = 1;
     enemiesArray.push_back(enemy);
@@ -73,38 +69,38 @@ TEST(GameTests, PlayerEnemyCollisionTest)
     // Player & enemies collision
     int counter;
     counter = 0;
-    for (enemy_iter = enemiesArray.begin(); enemy_iter != enemiesArray.end(); enemy_iter++)
-    {
-            if (player.rect.getGlobalBounds().intersects(enemiesArray[counter]->rect.getGlobalBounds()))
-            {
-                if (!enemiesArray[counter]->isAgro)
-                {
-                    enemiesArray[counter]->isAgro = true;
-                    enemiesArray[counter]->movementSpeed *= 1.5;
-                }
-                player.hp -= enemiesArray[counter]->damage;
-                enemiesArray[counter]->hp -= player.damage;
+    for (enemy_iter = enemiesArray.begin();
+         enemy_iter != enemiesArray.end(); enemy_iter++) {
+        if (player.rect.getGlobalBounds().intersects(
+                enemiesArray[counter]->rect.getGlobalBounds())) {
+            if (!enemiesArray[counter]->isAgro) {
+                enemiesArray[counter]->isAgro = true;
+                enemiesArray[counter]->movementSpeed *= 1.5;
             }
-            counter++;
+            player.hp -= enemiesArray[counter]->damage;
+            enemiesArray[counter]->hp -= player.damage;
+        }
+        counter++;
     }
     EXPECT_EQ(10, player.hp);
     EXPECT_TRUE(enemiesArray[0]->isAgro);
 
     // Update enemies
     counter = 0;
-    for (enemy_iter = enemiesArray.begin(); enemy_iter != enemiesArray.end(); enemy_iter++)
-    {
-        enemiesArray[counter]->update(static_cast<int>(player.rect.getPosition().x), static_cast<int>(player.rect.getPosition().y));
+    for (enemy_iter = enemiesArray.begin();
+         enemy_iter != enemiesArray.end(); enemy_iter++) {
+        enemiesArray[counter]->update(
+                static_cast<int>(player.rect.getPosition().x),
+                static_cast<int>(player.rect.getPosition().y));
         counter++;
     }
     EXPECT_FALSE(enemiesArray[0]->isExist);
 
     // Deleting enemies
     counter = 0;
-    for (enemy_iter = enemiesArray.begin(); enemy_iter != enemiesArray.end(); enemy_iter++)
-    {
-        if (!enemiesArray[counter]->isExist)
-        {
+    for (enemy_iter = enemiesArray.begin();
+         enemy_iter != enemiesArray.end(); enemy_iter++) {
+        if (!enemiesArray[counter]->isExist) {
             player.exp += enemiesArray[counter]->getExp;
             enemiesArray.erase(enemy_iter);
             break;
@@ -115,8 +111,7 @@ TEST(GameTests, PlayerEnemyCollisionTest)
     EXPECT_EQ(2, player.exp);
 }
 
-TEST(GameTests, weaponUpgrateTest)
-{
+TEST(GameTests, weaponUpgrateTest) {
     player.currentWeapon->updateLevel();
     player.currentWeapon->update();
     player.currentWeapon->updateStats();

@@ -7,11 +7,11 @@
 #include <SFML/Window.hpp>
 
 class Box :
-	public MapObject
-{
+        public MapObject {
 public:
-	Box(sf::Sprite* sprite, float x, float y);
-	virtual ~Box();
+    Box(sf::Sprite *sprite, float x, float y);
+
+    virtual ~Box();
 };
 
 #endif //BOX_H

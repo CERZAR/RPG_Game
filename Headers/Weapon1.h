@@ -7,19 +7,24 @@
 
 #include "Weapon.h"
 #include "../Headers/Bullet1.h"
- /**
-  * @brief weapon1 class
-  */
+
+/**
+ * @brief weapon1 class
+ */
 class Weapon1 :
-	public Weapon
-{
+        public Weapon {
 public:
-	Weapon1(ResourcesContainer* res);
-	virtual ~Weapon1();
-	void update();
-	void render(sf::RenderTarget* target);
-	void updateStats();
-	Bullet* getBullet(int direction);
+    Weapon1(ResourcesContainer *res);
+
+    virtual ~Weapon1();
+
+    void update();
+
+    void render(sf::RenderTarget *target);
+
+    void updateStats();
+
+    Bullet *getBullet(int direction);
 };
 
 #endif //WEAPON1_H

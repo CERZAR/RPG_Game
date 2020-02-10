@@ -12,19 +12,19 @@
 /// \return Application exit code
 ///
 ////////////////////////////////////////////////////////////
-int main()
-{
+int main() {
     // Check that the device can capture audio
-    if (sf::SoundRecorder::isAvailable() == false)
-    {
-        std::cout << "Sorry, audio capture is not supported by your system" << std::endl;
+    if (sf::SoundRecorder::isAvailable() == false) {
+        std::cout << "Sorry, audio capture is not supported by your system"
+                  << std::endl;
         return EXIT_SUCCESS;
     }
 
     // Choose the sample rate
     unsigned int sampleRate;
-    std::cout << "Please choose the sample rate for sound capture (44100 is CD quality): ";
-    std::cin  >> sampleRate;
+    std::cout
+            << "Please choose the sample rate for sound capture (44100 is CD quality): ";
+    std::cin >> sampleRate;
     std::cin.ignore(10000, '\n');
 
     // Wait for user input...
@@ -41,22 +41,24 @@ int main()
     recorder.stop();
 
     // Get the buffer containing the captured data
-    const sf::SoundBuffer& buffer = recorder.getBuffer();
+    const sf::SoundBuffer &buffer = recorder.getBuffer();
 
     // Display captured sound informations
     std::cout << "Sound information:" << std::endl;
-    std::cout << " " << buffer.getDuration().asSeconds() << " seconds"           << std::endl;
-    std::cout << " " << buffer.getSampleRate()           << " samples / seconds" << std::endl;
-    std::cout << " " << buffer.getChannelCount()         << " channels"          << std::endl;
+    std::cout << " " << buffer.getDuration().asSeconds() << " seconds"
+              << std::endl;
+    std::cout << " " << buffer.getSampleRate() << " samples / seconds"
+              << std::endl;
+    std::cout << " " << buffer.getChannelCount() << " channels" << std::endl;
 
     // Choose what to do with the recorded sound data
     char choice;
-    std::cout << "What do you want to do with captured sound (p = play, s = save) ? ";
-    std::cin  >> choice;
+    std::cout
+            << "What do you want to do with captured sound (p = play, s = save) ? ";
+    std::cin >> choice;
     std::cin.ignore(10000, '\n');
 
-    if (choice == 's')
-    {
+    if (choice == 's') {
         // Choose the filename
         std::string filename;
         std::cout << "Choose the file to create: ";
@@ -64,18 +66,16 @@ int main()
 
         // Save the buffer
         buffer.saveToFile(filename);
-    }
-    else
-    {
+    } else {
         // Create a sound instance and play it
         sf::Sound sound(buffer);
         sound.play();
 
         // Wait until finished
-        while (sound.getStatus() == sf::Sound::Playing)
-        {
+        while (sound.getStatus() == sf::Sound::Playing) {
             // Display the playing position
-            std::cout << "\rPlaying... " << sound.getPlayingOffset().asSeconds() << " sec        ";
+            std::cout << "\rPlaying... " << sound.getPlayingOffset().asSeconds()
+                      << " sec        ";
             std::cout << std::flush;
 
             // Leave some CPU time for other threads

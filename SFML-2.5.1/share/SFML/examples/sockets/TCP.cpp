@@ -11,15 +11,15 @@
 /// send a message and wait for the answer.
 ///
 ////////////////////////////////////////////////////////////
-void runTcpServer(unsigned short port)
-{
+void runTcpServer(unsigned short port) {
     // Create a server socket to accept new connections
     sf::TcpListener listener;
 
     // Listen to the given port for incoming connections
     if (listener.listen(port) != sf::Socket::Done)
         return;
-    std::cout << "Server is listening to port " << port << ", waiting for connections... " << std::endl;
+    std::cout << "Server is listening to port " << port
+              << ", waiting for connections... " << std::endl;
 
     // Wait for a connection
     sf::TcpSocket socket;
@@ -38,7 +38,8 @@ void runTcpServer(unsigned short port)
     std::size_t received;
     if (socket.receive(in, sizeof(in), received) != sf::Socket::Done)
         return;
-    std::cout << "Answer received from the client: \"" << in << "\"" << std::endl;
+    std::cout << "Answer received from the client: \"" << in << "\""
+              << std::endl;
 }
 
 
@@ -47,16 +48,13 @@ void runTcpServer(unsigned short port)
 /// welcome message and send an answer.
 ///
 ////////////////////////////////////////////////////////////
-void runTcpClient(unsigned short port)
-{
+void runTcpClient(unsigned short port) {
     // Ask for the server address
     sf::IpAddress server;
-    do
-    {
+    do {
         std::cout << "Type the address or name of the server to connect to: ";
-        std::cin  >> server;
-    }
-    while (server == sf::IpAddress::None);
+        std::cin >> server;
+    } while (server == sf::IpAddress::None);
 
     // Create a socket for communicating with the server
     sf::TcpSocket socket;
@@ -71,7 +69,8 @@ void runTcpClient(unsigned short port)
     std::size_t received;
     if (socket.receive(in, sizeof(in), received) != sf::Socket::Done)
         return;
-    std::cout << "Message received from the server: \"" << in << "\"" << std::endl;
+    std::cout << "Message received from the server: \"" << in << "\""
+              << std::endl;
 
     // Send an answer to the server
     const char out[] = "Hi, I'm a client";
