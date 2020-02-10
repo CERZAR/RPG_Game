@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_THREAD_HPP_
-#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_THREAD_HPP_
+#ifndef SFML_THREAD_HPP
+#define SFML_THREAD_HPP
 
 ////////////////////////////////////////////////////////////
 // Headers
@@ -36,7 +36,6 @@
 namespace sf {
 namespace priv {
 class ThreadImpl;
-
 struct ThreadFunc;
 } // namespace priv
 
@@ -188,7 +187,7 @@ private:
 
 } // namespace sf
 
-#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_THREAD_HPP_
+#endif // SFML_THREAD_HPP
 
 ////////////////////////////////////////////////////////////
 /// \class sf::Thread

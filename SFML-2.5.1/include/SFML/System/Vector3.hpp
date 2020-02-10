@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_VECTOR3_HPP_
-#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_VECTOR3_HPP_
+#ifndef SFML_VECTOR3_HPP
+#define SFML_VECTOR3_HPP
 
 namespace sf {
 ////////////////////////////////////////////////////////////
@@ -246,7 +246,7 @@ typedef Vector3<float> Vector3f;
 
 } // namespace sf
 
-#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_VECTOR3_HPP_
+#endif // SFML_VECTOR3_HPP
 
 ////////////////////////////////////////////////////////////
 /// \class sf::Vector3

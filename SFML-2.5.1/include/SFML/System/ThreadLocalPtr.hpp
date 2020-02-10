@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_THREADLOCALPTR_HPP_
-#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_THREADLOCALPTR_HPP_
+#ifndef SFML_THREADLOCALPTR_HPP
+#define SFML_THREADLOCALPTR_HPP
 
 ////////////////////////////////////////////////////////////
 // Headers
@@ -44,7 +44,7 @@ public:
   /// \param value Optional value to initialize the variable
   ///
   ////////////////////////////////////////////////////////////
-  explicit ThreadLocalPtr(T *value = NULL);
+  ThreadLocalPtr(T *value = NULL);
 
   ////////////////////////////////////////////////////////////
   /// \brief Overload of unary operator *
@@ -102,7 +102,7 @@ public:
 
 #include <SFML/System/ThreadLocalPtr.inl>
 
-#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_THREADLOCALPTR_HPP_
+#endif // SFML_THREADLOCALPTR_HPP
 
 ////////////////////////////////////////////////////////////
 /// \class sf::ThreadLocalPtr

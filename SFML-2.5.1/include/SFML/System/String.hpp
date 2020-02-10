@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_STRING_HPP_
-#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_STRING_HPP_
+#ifndef SFML_STRING_HPP
+#define SFML_STRING_HPP
 
 ////////////////////////////////////////////////////////////
 // Headers
@@ -74,7 +74,7 @@ public:
   /// \param locale   Locale to use for conversion
   ///
   ////////////////////////////////////////////////////////////
-  explicit String(char ansiChar, const std::locale &locale = std::locale());
+  String(char ansiChar, const std::locale &locale = std::locale());
 
   ////////////////////////////////////////////////////////////
   /// \brief Construct from single wide character
@@ -82,7 +82,7 @@ public:
   /// \param wideChar Wide character to convert
   ///
   ////////////////////////////////////////////////////////////
-  explicit String(wchar_t wideChar);
+  String(wchar_t wideChar);
 
   ////////////////////////////////////////////////////////////
   /// \brief Construct from single UTF-32 character
@@ -90,7 +90,7 @@ public:
   /// \param utf32Char UTF-32 character to convert
   ///
   ////////////////////////////////////////////////////////////
-  explicit String(Uint32 utf32Char);
+  String(Uint32 utf32Char);
 
   ////////////////////////////////////////////////////////////
   /// \brief Construct from a null-terminated C-style ANSI string and a locale
@@ -102,8 +102,7 @@ public:
   /// \param locale     Locale to use for conversion
   ///
   ////////////////////////////////////////////////////////////
-  explicit String(const char *ansiString, const std::locale &locale =
-      std::locale());
+  String(const char *ansiString, const std::locale &locale = std::locale());
 
   ////////////////////////////////////////////////////////////
   /// \brief Construct from an ANSI string and a locale
@@ -124,7 +123,7 @@ public:
   /// \param wideString Wide string to convert
   ///
   ////////////////////////////////////////////////////////////
-  explicit String(const wchar_t *wideString);
+  String(const wchar_t *wideString);
 
   ////////////////////////////////////////////////////////////
   /// \brief Construct from a wide string
@@ -132,7 +131,7 @@ public:
   /// \param wideString Wide string to convert
   ///
   ////////////////////////////////////////////////////////////
-  explicit String(const std::wstring &wideString);
+  String(const std::wstring &wideString);
 
   ////////////////////////////////////////////////////////////
   /// \brief Construct from a null-terminated C-style UTF-32 string
@@ -140,7 +139,7 @@ public:
   /// \param utf32String UTF-32 string to assign
   ///
   ////////////////////////////////////////////////////////////
-  explicit String(const Uint32 *utf32String);
+  String(const Uint32 *utf32String);
 
   ////////////////////////////////////////////////////////////
   /// \brief Construct from an UTF-32 string
@@ -148,7 +147,7 @@ public:
   /// \param utf32String UTF-32 string to assign
   ///
   ////////////////////////////////////////////////////////////
-  explicit String(const std::basic_string<Uint32> &utf32String);
+  String(const std::basic_string<Uint32> &utf32String);
 
   ////////////////////////////////////////////////////////////
   /// \brief Copy constructor
@@ -520,7 +519,6 @@ public:
 private:
   friend SFML_SYSTEM_API bool operator==(const String &left,
                                          const String &right);
-
   friend SFML_SYSTEM_API bool operator<(const String &left,
                                         const String &right);
 
@@ -619,7 +617,7 @@ SFML_SYSTEM_API String operator+(const String &left, const String &right);
 
 } // namespace sf
 
-#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_STRING_HPP_
+#endif // SFML_STRING_HPP
 
 ////////////////////////////////////////////////////////////
 /// \class sf::String

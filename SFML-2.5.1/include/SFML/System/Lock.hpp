@@ -23,8 +23,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_2_5_1_INCLUDE_SFML_SYSTEM_LOCK_HPP_
-#define SFML_2_5_1_INCLUDE_SFML_SYSTEM_LOCK_HPP_
+#ifndef SFML_LOCK_HPP
+#define SFML_LOCK_HPP
 
 ////////////////////////////////////////////////////////////
 // Headers
@@ -68,7 +68,7 @@ private:
 
 } // namespace sf
 
-#endif  // SFML_2_5_1_INCLUDE_SFML_SYSTEM_LOCK_HPP_
+#endif // SFML_LOCK_HPP
 
 ////////////////////////////////////////////////////////////
 /// \class sf::Lock
