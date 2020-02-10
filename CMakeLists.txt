@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.15)
 set(This RPG_GAME)
 project(${This})
 
+option(BUILD_TESTS Off)
+
 set(CMAKE_CXX_STANDARD 17)
 
 set(SFML_INCLUDE_DIR "SFML-2.5.1/include")
@@ -93,6 +95,9 @@ set(Sources
 add_executable(${This} Sources/main.cpp ${Sources} ${Headers})
 target_link_libraries (${This} sfml-graphics sfml-window sfml-system)
 
+# Tests
+if (BUILD_TESTS)
+
 enable_testing()
 
 add_subdirectory(Packages/googletest)
@@ -107,3 +112,5 @@ add_executable(runGameTests
 target_link_libraries(runGameTests gtest gtest_main sfml-graphics sfml-window sfml-system)
 
 add_test(NAME unit_tests COMMAND tests)
+
+endif()
