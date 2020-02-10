@@ -18,54 +18,54 @@ language: cpp
 services:
   - docker
 
-#matrix:
-#  include:
-#    - os: linux
-#      dist: xenial
-#      sudo: true
-#      compiler: gcc
-#      addons:
-#        apt:
-#          sources:
-#            - ubuntu-toolchain-r-test
-#          packages:
-#            - gcc-8
-#            - g++-8
-#            - cmake
+matrix:
+  include:
+    - os: linux
+      dist: xenial
+      sudo: true
+      compiler: gcc
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - gcc-8
+            - g++-8
+            - cmake
+#
+script:
+  - git submodule update --init --recursive
+  - sudo apt-get install -y libfreetype6-dev libxrandr-dev libudev-dev libogg-dev libflac-dev libvorbis-dev libopenal-dev
+  - sudo ln -s /usr/bin/gcc-8 /usr/local/bin/gcc
+  - sudo ln -s /usr/bin/g++-8 /usr/local/bin/g++
+  - mkdir -p .build
+  - cd .build
+  - cmake .. -DBUILD_TESTS=On
+  - cmake --build .
 
-#script:
-#  - git submodule update --init --recursive
-#  - sudo apt-get install -y libfreetype6-dev libxrandr-dev libudev-dev libogg-dev libflac-dev libvorbis-dev libopenal-dev
-#  - sudo ln -s /usr/bin/gcc-8 /usr/local/bin/gcc
-#  - sudo ln -s /usr/bin/g++-8 /usr/local/bin/g++
-#  - mkdir -p .build
-#  - cd .build
-#  - cmake .. -DBUILD_TESTS=On
-#  - cmake --build .
-
-  jobs:
-    include:
-      - name: "tests"
-        dist: xenial
-        sudo: true
-        compiler: gcc
-        addons:
-          apt:
-            sources:
-              - ubuntu-toolchain-r-test
-            packages:
-              - gcc-8
-              - g++-8
-              - cmake
-        script:
-          - git submodule update --init --recursive
-          - sudo apt-get install -y libfreetype6-dev libxrandr-dev libudev-dev libogg-dev libflac-dev libvorbis-dev libopenal-dev
-          - sudo ln -s /usr/bin/gcc-8 /usr/local/bin/gcc
-          - sudo ln -s /usr/bin/g++-8 /usr/local/bin/g++
-          - mkdir -p .build
-          - cd .build
-          - cmake .. -DBUILD_TESTS=On
-          - cmake --build .
-      - name: "checks"
-        script:
-          - docker run -v `pwd`:`pwd` -w `pwd` --cap-add=SYS_PTRACE -t rusdevops/bootstrap-cpp scripts/checks.sh
+#  jobs:
+#    include:
+#      - name: "tests"
+#        dist: xenial
+#        sudo: true
+#        compiler: gcc
+#        addons:
+#          apt:
+#            sources:
+#              - ubuntu-toolchain-r-test
+#            packages:
+#              - gcc-8
+#              - g++-8
+#              - cmake
+#        script:
+#          - git submodule update --init --recursive
+#          - sudo apt-get install -y libfreetype6-dev libxrandr-dev libudev-dev libogg-dev libflac-dev libvorbis-dev libopenal-dev
+#          - sudo ln -s /usr/bin/gcc-8 /usr/local/bin/gcc
+#          - sudo ln -s /usr/bin/g++-8 /usr/local/bin/g++
+#          - mkdir -p .build
+#          - cd .build
+#          - cmake .. -DBUILD_TESTS=On
+#          - cmake --build .
+#      - name: "checks"
+#        script:
+#          - docker run -v `pwd`:`pwd` -w `pwd` --cap-add=SYS_PTRACE -t rusdevops/bootstrap-cpp scripts/checks.sh
