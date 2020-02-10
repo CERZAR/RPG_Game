@@ -27,3 +27,6 @@ jobs:
         - cd .build
         - cmake .. -DBUILD_TESTS=On
         - cmake --build .
+    - name: checks
+      script:
+        - docker run -t -v $(pwd):/var/builder/ -w /var/builder --entrypoint ./scripts/checks.sh $DOCKER_IMAGE
