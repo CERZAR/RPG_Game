@@ -3,7 +3,6 @@
 // Headers
 ////////////////////////////////////////////////////////////
 #define STB_PERLIN_IMPLEMENTATION
-
 #include "stb_perlin.h"
 #include <SFML/Graphics.hpp>
 #include <algorithm>
@@ -64,7 +63,6 @@ float lightFactor = 0.7f;
 
 // Forward declarations of the functions we define further down
 void threadFunction();
-
 void generateTerrain(sf::Vertex *vertexBuffer);
 
 ////////////////////////////////////////////////////////////

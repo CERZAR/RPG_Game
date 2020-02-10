@@ -224,42 +224,6 @@ void Map::checkPlayerCollision(Object *target) {
                 vector[counter]->rect.getGlobalBounds().width,
             target->rect.getGlobalBounds().top);
       }
-      // if (target->direction == UP)
-      //{
-      //	target->rect.move(0, target->movementSpeed);
-      //}
-      // if (target->direction == DOWN)
-      //{
-      //	target->rect.move(0, -1 * target->movementSpeed);
-      //}
-      // if (target->direction == RIGHT)
-      //{
-      //	target->rect.move(-1 * target->movementSpeed, 0);
-      //}
-      // if (target->direction == LEFT)
-      //{
-      //	target->rect.move(target->movementSpeed, 0);
-      //}
-      // if (target->direction == -1)
-      //{
-      //	target->rect.move(-1 * target->movementSpeed / 2,
-      //target->movementSpeed / 2);
-      //}
-      // if (target->direction == -2)
-      //{
-      //	target->rect.move(target->movementSpeed / 2,
-      //target->movementSpeed / 2);
-      //}
-      // if (target->direction == -3)
-      //{
-      //	target->rect.move(-1 * target->movementSpeed / 2, -1 *
-      //target->movementSpeed / 2);
-      //}
-      // if (target->direction == -4)
-      //{
-      //	target->rect.move(target->movementSpeed / 2, -1 *
-      //target->movementSpeed / 2);
-      //}
     }
     counter++;
   }

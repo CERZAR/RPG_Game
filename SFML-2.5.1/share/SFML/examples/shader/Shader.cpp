@@ -361,7 +361,7 @@ int main() {
           window.close();
           break;
 
-          // Left arrow key: previous shader
+        // Left arrow key: previous shader
         case sf::Keyboard::Left:
           if (current == 0)
             current = effects.size() - 1;
@@ -371,7 +371,7 @@ int main() {
                                 effects[current]->getName());
           break;
 
-          // Right arrow key: next shader
+        // Right arrow key: next shader
         case sf::Keyboard::Right:
           if (current == effects.size() - 1)
             current = 0;

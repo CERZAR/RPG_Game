@@ -4,12 +4,11 @@
 // Copyright (C) 2007-2018 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
-// In no event will the authors be held liable for any damages arising from the
-// use of this software.
+// In no event will the authors be held liable for any damages arising from the use of this software.
 //
 // Permission is granted to anyone to use this software for any purpose,
-// including commercial applications, and to alter it and redistribute it
-// freely, subject to the following restrictions:
+// including commercial applications, and to alter it and redistribute it freely,
+// subject to the following restrictions:
 //
 // 1. The origin of this software must not be misrepresented;
 //    you must not claim that you wrote the original software.
@@ -23,39 +22,56 @@
 //
 ////////////////////////////////////////////////////////////
 
-namespace sf {
+
+namespace sf
+{
 ////////////////////////////////////////////////////////////
 template <typename T>
-ThreadLocalPtr<T>::ThreadLocalPtr(T *value) : ThreadLocal(value) {}
-
-////////////////////////////////////////////////////////////
-template <typename T> T &ThreadLocalPtr<T>::operator*() const {
-  return *static_cast<T *>(getValue());
+ThreadLocalPtr<T>::ThreadLocalPtr(T* value) :
+ThreadLocal(value)
+{
 }
 
-////////////////////////////////////////////////////////////
-template <typename T> T *ThreadLocalPtr<T>::operator->() const {
-  return static_cast<T *>(getValue());
-}
-
-////////////////////////////////////////////////////////////
-template <typename T> ThreadLocalPtr<T>::operator T *() const {
-  return static_cast<T *>(getValue());
-}
 
 ////////////////////////////////////////////////////////////
 template <typename T>
-ThreadLocalPtr<T> &ThreadLocalPtr<T>::operator=(T *value) {
-  setValue(value);
-  return *this;
+T& ThreadLocalPtr<T>::operator *() const
+{
+    return *static_cast<T*>(getValue());
 }
+
 
 ////////////////////////////////////////////////////////////
 template <typename T>
-ThreadLocalPtr<T> &
-ThreadLocalPtr<T>::operator=(const ThreadLocalPtr<T> &right) {
-  setValue(right.getValue());
-  return *this;
+T* ThreadLocalPtr<T>::operator ->() const
+{
+    return static_cast<T*>(getValue());
+}
+
+
+////////////////////////////////////////////////////////////
+template <typename T>
+ThreadLocalPtr<T>::operator T*() const
+{
+    return static_cast<T*>(getValue());
+}
+
+
+////////////////////////////////////////////////////////////
+template <typename T>
+ThreadLocalPtr<T>& ThreadLocalPtr<T>::operator =(T* value)
+{
+    setValue(value);
+    return *this;
+}
+
+
+////////////////////////////////////////////////////////////
+template <typename T>
+ThreadLocalPtr<T>& ThreadLocalPtr<T>::operator =(const ThreadLocalPtr<T>& right)
+{
+    setValue(right.getValue());
+    return *this;
 }
 
 } // namespace sf

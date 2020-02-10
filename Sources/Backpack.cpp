@@ -88,7 +88,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 0
   sf::Text *text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(30);
   text->setString("PLAYER");
@@ -97,7 +96,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 1 lvl
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(30);
   text->setFillColor(sf::Color::Magenta);
@@ -105,7 +103,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 2 hp
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(25);
   text->setFillColor(sf::Color::Red);
@@ -113,7 +110,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 3 mp
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(25);
   text->setFillColor(sf::Color(30, 144, 255));
@@ -121,7 +117,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 4 exp
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(25);
   text->setFillColor(sf::Color::Cyan);
@@ -129,7 +124,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 5 gold
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(25);
   text->setFillColor(sf::Color::Yellow);
@@ -137,7 +131,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 6 current weapon
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(40);
   text->setString("Current weapon:");
@@ -146,7 +139,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 7 second weapon
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(40);
   text->setString("Second weapon:");
@@ -155,7 +147,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 8 current weapon - upgate
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(20);
   text->setString("Upgrate\n  (1)");
@@ -164,7 +155,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 9 second weapon - upgrate
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(20);
   text->setString("Upgrate\n  (2)");
@@ -173,7 +163,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 10 second weapon - equip
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(20);
   text->setString("Equip\n (3)");
@@ -182,7 +171,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 11 second weapon - upgrate
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(20);
   text->setString("Throw\n (4)");
@@ -191,7 +179,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 12 current info - lvl
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(18);
   text->setFillColor(sf::Color::White);
@@ -199,7 +186,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 13 current info - damage
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(18);
   text->setFillColor(sf::Color::White);
@@ -207,7 +193,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 14 current info - atack speed
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(17);
   text->setFillColor(sf::Color::White);
@@ -215,7 +200,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 15 current info - speed
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(18);
   text->setFillColor(sf::Color::White);
@@ -223,7 +207,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 16 current info - flight time
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(18);
   text->setFillColor(sf::Color::White);
@@ -231,7 +214,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 17 current info - Upgrate cost
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(18);
   text->setFillColor(sf::Color::White);
@@ -239,7 +221,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 18 second info - lvl
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(18);
   text->setFillColor(sf::Color::White);
@@ -247,7 +228,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 19 second info - damage
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(18);
   text->setFillColor(sf::Color::White);
@@ -255,7 +235,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 20 second info - atack speed
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(17);
   text->setFillColor(sf::Color::White);
@@ -263,7 +242,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 21 second info - speed
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(18);
   text->setFillColor(sf::Color::White);
@@ -271,7 +249,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 22 second info - flight time
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(18);
   text->setFillColor(sf::Color::White);
@@ -279,7 +256,6 @@ Backpack::Backpack(ResourcesContainer *res) {
 
   // text 23 second info - Upgrate cost
   text = new sf::Text;
-  ;
   text->setFont(*res->pixel_font);
   text->setCharacterSize(18);
   text->setFillColor(sf::Color::White);
@@ -318,7 +294,7 @@ void Backpack::update(Player *player) {
   icon.setPosition(x + 50, y + 100);
   iconCurrentWeapon = &player->currentWeapon->iconSprite;
   iconCurrentWeapon->setPosition(x + 410, y + 70);
-  if (player->haveSecondWeapon == true) {
+  if (player->haveSecondWeapon) {
     backpackShapeArray[8]->setOutlineThickness(4);
     player->secondWeapon->updateOutline();
     backpackShapeArray[8]->setOutlineColor(
@@ -355,7 +331,7 @@ void Backpack::update(Player *player) {
   backpackTextArray[10]->setPosition(x + 580, y + 452);
   backpackTextArray[11]->setPosition(x + 728, y + 452);
 
-  if (player->haveSecondWeapon == true) {
+  if (player->haveSecondWeapon) {
     backpackTextArray[12]->setPosition(x + 820, y + 315);
     backpackTextArray[12]->setString(
         "LVL: " + std::to_string(player->currentWeapon->level));
@@ -423,6 +399,6 @@ void Backpack::render(sf::RenderTarget *target) {
   target->draw(icon);
 
   target->draw(*iconCurrentWeapon);
-  if (player->haveSecondWeapon == true)
+  if (player->haveSecondWeapon)
     target->draw(*iconSecondWeapon);
 }
